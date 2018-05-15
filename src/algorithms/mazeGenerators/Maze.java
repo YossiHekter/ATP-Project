@@ -40,6 +40,31 @@ public class Maze {
         goal = new Position();
     }
 
+    /**
+     * a constructor that receives a one-dimensional array of byte
+     * @param maze - a one-dimensional array of byte representing a maze
+     */
+    public Maze(byte[] maze){
+        int i = 0;
+        int row = byteToInt(maze, i);
+        i = nextZero(maze, i);
+
+        int column = byteToInt(maze, i);
+        i = nextZero(maze, i);
+
+        int startRow = byteToInt(maze, i);
+        i = nextZero(maze, i);
+
+        int goalRow = byteToInt(maze, i);
+        i = nextZero(maze, i);
+
+        start = new Position(startRow, 0);
+        goal = new Position(goalRow, column - 1);
+
+        mazeMatrix = new byte[row][column];
+        create2DByteMaze(maze, mazeMatrix, i);
+    }
+
     //<editor-fold desc="Getters">
     /**
      * @return The start position of the maze
@@ -135,66 +160,93 @@ public class Maze {
     }
 
     public byte[] toByteArray(){
-        byte[] tmpByteMaze = new byte[100];
-        byte[] byteMaze;
-        int row = mazeMatrix.length;
-        int column = mazeMatrix[0].length;
+        int row = getMazeMatrix().length;
+        int column = getMazeMatrix()[0].length;
         int start = getStartPosition().getRowIndex();
         int goal = getGoalPosition().getRowIndex();
         int counter = 0;
 
+        //size of 1D byte array represent all data of maze
+        int size = digitsInByte(row) + digitsInByte(column) + digitsInByte(start) + digitsInByte(goal) + 4 + row*column;
+
+        byte[] byteMaze = new byte[size];
         //set the number of rows
-        setValue(tmpByteMaze, row, counter);
+        counter = intToByte(byteMaze, row, counter);
 
         //set the number of rows
-        setValue(tmpByteMaze, column, counter);
+        counter = intToByte(byteMaze, column, counter);
 
         //set the start position
-        setValue(tmpByteMaze, start, counter);
+        counter = intToByte(byteMaze, start, counter);
 
-        //set the goal position
-        setValue(tmpByteMaze, goal, counter);
-
-        //set the size of the final byte array
-        byteMaze = new byte[row*column + counter];
-
-        //copy from the tmp array to the final array
-        copyToByteMaze(byteMaze, tmpByteMaze);
+        //set the goal posiotion
+        counter = intToByte(byteMaze, goal, counter);
 
         //copy the maze's matrix to the byte array
-        createByteMaze(byteMaze, counter);
+        create1DByteMaze(byteMaze, mazeMatrix, counter);
+
         return byteMaze;
     }
 
-
-    void copyToByteMaze(byte[] target, byte[] sourse){
-        for(int i=0; i<sourse.length;i++){
-            target[i]=sourse[i];
-        }
-    }
-
-    void createByteMaze(byte[] byteMaze, int index){
-        for(int i=0; i<mazeMatrix.length;i++){
-            for(int j=0; j<mazeMatrix[0].length;j++){
-                byteMaze[index]=mazeMatrix[i][j];
+    //create 1D array from 2D array
+    private void create1DByteMaze(byte[] byteMazeD1, byte[][] byteMazeD2, int index){
+        for(int i=0; i<byteMazeD2.length;i++){
+            for(int j=0; j<byteMazeD2[0].length;j++){
+                byteMazeD1[index] = byteMazeD2[i][j];
+                index++;
             }
         }
     }
 
-    void setValue (byte[] array, int position, int index )
-    {
-        while(position>255){
+    //create 2D array from 1D array
+    private void create2DByteMaze(byte[] byteMazeD1, byte[][] byteMazeD2, int index){
+        for(int i=0; i<byteMazeD2.length;i++){
+            for(int j=0; j<byteMazeD2[0].length;j++){
+                byteMazeD2[i][j] = byteMazeD1[index];
+                index++;
+            }
+        }
+    }
+
+    //convert int to byte and put on array, statr at index
+    private int intToByte (byte[] array, int num, int index ){
+        while(num>255){
             array[index] = -1;
-            position-=255;
+            num-=255;
             index++;
         }
-        if(position>0){
-            array[index] = (byte)position;
+        if(num>0){
+            array[index] = (byte)num;
             index++;
         }
         array[index]=0;
         index++;
+        return index;
     }
 
+    //return a int that represent by byte antil see zero in array
+    private int byteToInt(byte[] arr, int i){
+        int tmp = 0;
+        while (arr[i] != 0){
+            if(arr[i] < 0)
+                tmp += arr[i] + 256;
+            else
+                tmp += arr[i];
+            i++;
+        }
+        return tmp;
+    }
 
+    //return the number of byte that need to present int
+    private int digitsInByte(int num){
+        return (int)Math.ceil((double)num/255);
+    }
+
+    //return the index of next zero in array
+    private int nextZero(byte[] arr, int index){
+        while (arr[index] != 0)
+            index++;
+        index++;
+        return index;
+    }
 }
