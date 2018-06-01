@@ -1,10 +1,12 @@
 package algorithms.mazeGenerators;
 
+import java.io.Serializable;
+
 /**
  * This class represents a maze object
  * @author Roee Sanker & Yossi Hekter
  */
-public class Maze {
+public class Maze implements Serializable {
 
     /**
      * The start position of the maze
@@ -191,9 +193,8 @@ public class Maze {
     //create 1D array from 2D array
     private void create1DByteMaze(byte[] byteMazeD1, byte[][] byteMazeD2, int index){
         for(int i=0; i<byteMazeD2.length;i++){
-            for(int j=0; j<byteMazeD2[0].length;j++){
+            for(int j=0; j<byteMazeD2[0].length;j++, index++){
                 byteMazeD1[index] = byteMazeD2[i][j];
-                index++;
             }
         }
     }
@@ -201,9 +202,8 @@ public class Maze {
     //create 2D array from 1D array
     private void create2DByteMaze(byte[] byteMazeD1, byte[][] byteMazeD2, int index){
         for(int i=0; i<byteMazeD2.length;i++){
-            for(int j=0; j<byteMazeD2[0].length;j++){
+            for(int j=0; j<byteMazeD2[0].length;j++, index++){
                 byteMazeD2[i][j] = byteMazeD1[index];
-                index++;
             }
         }
     }

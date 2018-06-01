@@ -1,12 +1,14 @@
 package algorithms.search;
 import algorithms.mazeGenerators.Position;
 
+import java.io.Serializable;
+
 /**
  * This class represents a state in the maze
  * Maze state is represented by position class
  * @author Roee Sanker & Yossi Hekter
  */
-public class MazeState extends AState{
+public class MazeState extends AState {
 
     /**
      * The Position coordinates of the state

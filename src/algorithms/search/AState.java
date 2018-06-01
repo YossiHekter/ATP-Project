@@ -1,11 +1,12 @@
 package algorithms.search;
 
+import java.io.Serializable;
+
 /**
  * This class represents an abstract state of a ISsearchable class
  * @author Roee Sanker & Yossi Hekter
  */
-public abstract class AState implements Comparable<AState> {
-
+public abstract class AState implements Comparable<AState>, Serializable {
     /**
      * Representing the state using a string
      */

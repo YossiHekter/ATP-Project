@@ -3,13 +3,28 @@ package IO;
 import java.io.IOException;
 import java.io.OutputStream;
 
+/**
+ * This class compress the maze to a byte array and write it into a file
+ * @author Roee Sanker & Yossi Hekter
+ */
 public class MyCompressorOutputStream extends OutputStream {
+    /*
+    *the stream to write to
+    * */
     private OutputStream out;
 
+    /**
+     * Constructor
+     * @param out The new output stream
+     */
     public MyCompressorOutputStream(OutputStream out){
         this.out = out;
     }
 
+    /**
+     * This function write a integer in the output stream
+     * @param num The integer to write
+     */
     @Override
     public void write(int num){
         while (num > 253){
@@ -21,125 +36,119 @@ public class MyCompressorOutputStream extends OutputStream {
             writeByte((byte)num);
     }
 
-    public void write(byte[] b){
+    /**
+     * This function write a byte array in the output stream
+     * @param byteArray The byte array to write
+     */
+    public void write(byte[] byteArray) {
         int counter = 0;
         int index = 0;
-        while (counter < 4){
-            writeByte(b[index]);
-            if(b[index] == 0)
+        while (counter < 4) {
+            writeByte(byteArray[index]);
+            if (byteArray[index] == 0)
                 counter++;
             index++;
         }
-        int rowSize = getRowSize(b);
-        byte[] com = compressArray(b,index);
 
-        byte tmp = com[0];
-        if(tmp==0)
-            writeByte((byte)0);
+        //compress the regular bute array to a compressed butr array
+        byte[] compreesArray = compressArray(byteArray,index);
+        for(index = 0;index<compreesArray.length;index++)
+            index = getBinery(compreesArray, index);
 
-        for(index = 0;index<com.length;index++){
-            int i = specialCase(com, index);
-            if(i!=-1){
-                index = i;
-                continue;
-            }
-            else {
-                int secquence = countSecquence(com, index);
-                index += secquence;
-                write(secquence+1);
-            }
-        }
     }
 
-    private int countSecquence(byte[] b, int index){
-        byte cur = b[index];
-        index++;
-        int counter = 0;
-        while (index<b.length && cur == b[index]){
-            counter++;
-            index++;
+    /**
+     * This function do the compress proses by taking the first 8 bytes from the array
+     * and return the integer that represented in binary by them
+     * @param byteArray The byte array
+     * @param index The index in the array to take from
+     * @return int that represented the binary number of the 8 byte
+     */
+    private int getBinery(byte[] byteArray, int index){
+        int res;
+        if(index + 7 < byteArray.length ) {
+            String binery = "";
+            int size = index + 8;
+            for(;index<size;index++){
+                binery = binery+byteArray[index];
+            }
+            int toWrite = Integer.parseInt(binery, 2);
+            writeByte((byte) toWrite);
+            res = index - 1;
         }
-        return counter;
-    }
 
-    private int specialCase(byte[] b, int index){
-        int res = -1;
-        if(index + 4 < b.length ) {
-            if ((b[index] == 1 && b[index + 1] == 0 && b[index + 2] == 1 && b[index + 3] == 0)
-                    || (b[index] == 0 && b[index + 1] == 1 && b[index + 2] == 0 && b[index + 3] == 1)) {//254 represent 010/101
-                writeByte((byte) 254);
-                res = index + 2;
+        //if there is'nt 8 more byte in the array
+        else{
+            String binery = "";
+            for(;index < byteArray.length;index++){
+                binery = binery+byteArray[index];
             }
-        }
-        if(index + 3 < b.length && res == -1){
-            if((b[index]==1 && b[index+1]==0 && b[index+2]==1)
-                    || (b[index]==0 && b[index+1]==1 && b[index+2]==0)) {//255 represent 01/10
-                writeByte((byte) 255);
-                res = index+1;
-            }
+            int toWrite = Integer.parseInt(binery, 2);
+            writeByte((byte) toWrite);
+            res = index + 1;
         }
         return res;
     }
 
-    private byte[] compressArray(byte[] b, int start){
-        int row = getRowSize(b);
-        int col = getColumnSize(b);
+    /**
+     * This function do also a compress proses by taking off the frame of the maze's matrix
+     * @param byteArray The byte array
+     * @param start The start index of the array
+     * @return The compressed byte array
+     */
+    private byte[] compressArray(byte[] byteArray, int start){
+        int rowSize = getData(byteArray, 1);
+        int rowNum = getData(byteArray, 0);
 
-        byte[] ans = new byte[b.length-2*row-2*col-start+4];
-        start += row+1;
+        byte[] ans = new byte[byteArray.length-2*rowSize-2*rowNum-start+4];
+        start += rowSize+1;
         int counter = 0;
-        for (int i=0;i<ans.length;i++){
-            if(counter == row-2){
+        for (int i=0;i<ans.length;i++, counter++, start++){
+            if(counter == rowSize-2){
                 start+=2;
                 counter=0;
             }
-            ans[i]=b[start];
-            counter++;
-            start++;
+            ans[i]=byteArray[start];
         }
         return ans;
     }
 
+    /**
+     * This function write a byte in the output stream
+     * @param b The byte to write
+     */
     private void writeByte(byte b){
         try{
-            //System.out.println("write byte: " + b);
             out.write(b);
         }
         catch (IOException e) {
             e.printStackTrace();
         }
-
     }
 
-    private int getRowSize(byte[] b){
+    /**
+     * This function return the size of paramaters in the maze from the byte array
+     * @param byteArray The byte to write
+     * @param data The type of data to return
+     * data=0 -> row, data=1 -> col, data=2 -> Start row, data=3 -> Goal row
+     * @return The date that asked
+     */
+    private int getData(byte[] byteArray, int data){
         int ans = 0;
         int i = 0;
-        while (b[i] != 0){
+        int counter = 0;
+        while (counter < data){
+            if(byteArray[i] == 0)
+                counter++;
             i++;
         }
-        i++;
-        for(;b[i]!=0;i++){
-            if(b[i] < 0)
-                ans += b[i] + 256;
+        for(;byteArray[i]!=0;i++){
+            if(byteArray[i] < 0)
+                ans += byteArray[i] + 256;
             else
-                ans += b[i];
+                ans += byteArray[i];
         }
         return ans;
     }
-
-    private int getColumnSize(byte[] b){
-        int ans = 0;
-        int i = 0;
-        for(;b[i]!=0;i++){
-            if(b[i] < 0)
-                ans += b[i] + 256;
-            else
-                ans += b[i];
-        }
-        return ans;
-    }
-
-
-
 
 }

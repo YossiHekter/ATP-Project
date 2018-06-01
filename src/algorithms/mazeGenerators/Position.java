@@ -1,10 +1,12 @@
 package algorithms.mazeGenerators;
 
+import java.io.Serializable;
+
 /**
  * This class represents a position on the maze
  * @author Roee Sanker & Yossi Hekter
  */
-public class Position {
+public class Position implements Serializable {
 
     /**
      * The position's row
