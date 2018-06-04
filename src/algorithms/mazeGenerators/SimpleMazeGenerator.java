@@ -18,7 +18,10 @@ public class SimpleMazeGenerator extends AMazeGenerator {
      * @return The new maze
      */
     public Maze generate(int row, int column){
-        setMaze(new Maze(row, column));
+        if(row <3 || column <3)
+            setMaze(new Maze(10, 10));
+        else
+            setMaze(new Maze(row, column));
 
         //choose start position
         Position start = new Position( randomRow(row), 0);

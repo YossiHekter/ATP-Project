@@ -1,10 +1,8 @@
 package Server;
 
-import IO.MyCompressorOutputStream;
-import IO.MyDecompressorInputStream;
 import algorithms.mazeGenerators.Maze;
-import algorithms.mazeGenerators.MyMazeGenerator;
-import algorithms.search.*;
+import algorithms.search.SearchableMaze;
+import algorithms.search.Solution;
 
 import java.io.*;
 import java.util.Arrays;
@@ -14,6 +12,12 @@ import java.util.Map;
 public class ServerStrategySolveSearchProblem implements IServerStrategy {
     private Map<String,String> mazeOnDiskMap;
 
+    /**
+     * This function handles a client request to solver a maze
+     * @param inFromClient The stream from the client to the server
+     * @param outToClient The stream from the server to the client
+     * @param configurations Properties file
+     */
     public void serverStrategy(InputStream inFromClient, OutputStream outToClient,  Server.Configurations configurations){
         try {
             ObjectInputStream fromClient = new ObjectInputStream(inFromClient);
@@ -58,15 +62,26 @@ public class ServerStrategySolveSearchProblem implements IServerStrategy {
         }
     }
 
+    /**
+     * This function solves the maze and returns the solution
+     * @param mazeFromClient The maze from the client
+     * @param configurations Properties file
+     * @return The solution of the maze
+     */
     private Solution getMazeSolution(Maze mazeFromClient,  Server.Configurations configurations) {
         SearchableMaze searchableMaze = new SearchableMaze(mazeFromClient);
         Solution solution = configurations.getSolvingAlgorithm().solve(searchableMaze);
         return solution;
     }
 
-    private void writeNewFileToDisk(String s, Object objectToWrite) {
+    /**
+     * This function saves a new file to disk
+     * @param path The path where we will save the new file
+     * @param objectToWrite The object to save
+     */
+    private void writeNewFileToDisk(String path, Object objectToWrite) {
         try {
-            File file = new File(s);
+            File file = new File(path);
             FileOutputStream output = new FileOutputStream(file);
             ObjectOutputStream objectOutput = new ObjectOutputStream(output);
             objectOutput.writeObject(objectToWrite);
@@ -79,6 +94,11 @@ public class ServerStrategySolveSearchProblem implements IServerStrategy {
         }
     }
 
+    /**
+     * This function returns the number of the next maze to be saved on the disk
+     * @param tempDirectoryPath The path where the mazes are kept
+     * @return
+     */
     private int getMazeNum(String tempDirectoryPath) {
         int mazeNum = 0;
         while (mazeOnDiskMap.containsKey(tempDirectoryPath + "\\m" + mazeNum + ".maze"))
@@ -86,6 +106,12 @@ public class ServerStrategySolveSearchProblem implements IServerStrategy {
         return mazeNum;
     }
 
+    /**
+     * This function looks for whether the maze we received was previously resolved by the server
+     * If the maze is resolved in the past, we will return the path to the solution
+     * @param mazeBytesFromClient The maze from the client
+     * @return path to the solution or empty string
+     */
     private String findMazeOnDisk(byte[] mazeBytesFromClient) {
         String ans="";
 
@@ -109,6 +135,11 @@ public class ServerStrategySolveSearchProblem implements IServerStrategy {
         return ans;
     }
 
+    /**
+     * This function reads the map that preserves all their mazes and solutions
+     * If the map does not exist, it creates a new map
+     * @param tempDirectoryPath The path where the map are kept
+     */
     private void readMazeOnDisk(String tempDirectoryPath) {
         try {
             new File(tempDirectoryPath).mkdir();

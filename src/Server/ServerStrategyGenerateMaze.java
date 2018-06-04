@@ -1,15 +1,23 @@
 package Server;
 
 import IO.MyCompressorOutputStream;
-import IO.MyDecompressorInputStream;
 import algorithms.mazeGenerators.Maze;
-import algorithms.mazeGenerators.MyMazeGenerator;
 
 import java.io.*;
-import java.util.stream.Stream;
+import java.util.ArrayList;
 
+/**
+ * This class represents a server that produces mazes
+ * @author Roee Sanker & Yossi Hekter
+ */
 public class ServerStrategyGenerateMaze implements IServerStrategy {
 
+    /**
+     * This function handles a client request to create a maze the size the customer gives
+     * @param inFromClient The stream from the client to the server
+     * @param outToClient The stream from the server to the client
+     * @param configurations Properties file
+     */
     public void serverStrategy(InputStream inFromClient, OutputStream outToClient, Server.Configurations configurations){
         try {
             ObjectInputStream fromClient = new ObjectInputStream(inFromClient);
@@ -24,7 +32,15 @@ public class ServerStrategyGenerateMaze implements IServerStrategy {
             out.close();
 
             FileInputStream f = new FileInputStream(tempDirectoryPath + "\\tmp.maze");
-            byte[] compressedMaze = f.readAllBytes();
+
+            ArrayList<Byte> arrTmp = new ArrayList<>();
+            while (f.available() > 0)
+                arrTmp.add((byte) f.read());
+            byte[] compressedMaze = new byte[arrTmp.size()];
+            for(int i=0;i<arrTmp.size();i++){
+                compressedMaze[i] = arrTmp.get(i);
+            }
+
             f.close();
             toClient.writeObject(compressedMaze);
 
@@ -33,9 +49,25 @@ public class ServerStrategyGenerateMaze implements IServerStrategy {
         }
     }
 
+    /**
+     * This function creates a maze and returns the maze as an array of byte
+     * @param fromClient The input stream from the client
+     * @param configurations Properties file
+     * @return
+     */
     private byte[] generatorMazeForClient(ObjectInputStream fromClient, Server.Configurations configurations) {
         try {
-            int[] input = (int[]) fromClient.readObject();
+            Object o = fromClient.readObject();
+            int[] input;
+            if(o instanceof int[]){
+                input = (int[]) o;
+            }
+            else {
+                input = new int[2];
+                input[0] = 10;
+                input[1] = 10;
+            }
+            //int[] input = (int[]) fromClient.readObject();
             Maze maze = configurations.getMazeGenerator().generate(input[0], input[1]);
             return maze.toByteArray();
         } catch (IOException e) {
@@ -43,7 +75,8 @@ public class ServerStrategyGenerateMaze implements IServerStrategy {
         } catch (ClassNotFoundException e){
             e.printStackTrace();
         }
-        return null;
+        Maze maze = configurations.getMazeGenerator().generate(10, 10);
+        return maze.toByteArray();
     }
 
 }

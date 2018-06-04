@@ -8,9 +8,9 @@ import java.io.OutputStream;
  * @author Roee Sanker & Yossi Hekter
  */
 public class MyCompressorOutputStream extends OutputStream {
-    /*
-    *the stream to write to
-    * */
+    /**
+     * The stream to write to
+     */
     private OutputStream out;
 
     /**
@@ -25,7 +25,7 @@ public class MyCompressorOutputStream extends OutputStream {
      * This function write a integer in the output stream
      * @param num The integer to write
      */
-    @Override
+
     public void write(int num){
         while (num > 253){
             writeByte((byte)253);
@@ -53,7 +53,7 @@ public class MyCompressorOutputStream extends OutputStream {
         //compress the regular bute array to a compressed butr array
         byte[] compreesArray = compressArray(byteArray,index);
         for(index = 0;index<compreesArray.length;index++)
-            index = getBinery(compreesArray, index);
+            index = getBinary(compreesArray, index);
 
     }
 
@@ -64,7 +64,7 @@ public class MyCompressorOutputStream extends OutputStream {
      * @param index The index in the array to take from
      * @return int that represented the binary number of the 8 byte
      */
-    private int getBinery(byte[] byteArray, int index){
+    private int getBinary(byte[] byteArray, int index){
         int res;
         if(index + 7 < byteArray.length ) {
             String binery = "";
@@ -72,7 +72,8 @@ public class MyCompressorOutputStream extends OutputStream {
             for(;index<size;index++){
                 binery = binery+byteArray[index];
             }
-            int toWrite = Integer.parseInt(binery, 2);
+            //int toWrite = Integer.parseInt(binery, 2);
+            int toWrite = binaryToInt(binery);
             writeByte((byte) toWrite);
             res = index - 1;
         }
@@ -83,11 +84,25 @@ public class MyCompressorOutputStream extends OutputStream {
             for(;index < byteArray.length;index++){
                 binery = binery+byteArray[index];
             }
-            int toWrite = Integer.parseInt(binery, 2);
+            //int toWrite = Integer.parseInt(binery, 2);
+            int toWrite = binaryToInt(binery);
             writeByte((byte) toWrite);
             res = index + 1;
         }
         return res;
+    }
+
+    private int binaryToInt(String binery) {
+        int ans = 0;
+        int pow = 0;
+        for(int i=binery.length()-1;i>=0;i--){
+            if(binery.charAt(i) == '1'){
+                ans += Math.pow(2, pow);
+            }
+            pow++;
+        }
+
+        return ans;
     }
 
     /**

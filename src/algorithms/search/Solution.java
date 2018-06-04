@@ -16,7 +16,7 @@ public class Solution implements Serializable {
     /**
      * Constructor
      */
-    public Solution(){path = null;}
+    public Solution(){path = new ArrayList<>();}
 
     /**
      * This function returns the path of all states from the start state to the goal state
@@ -32,7 +32,6 @@ public class Solution implements Serializable {
      */
     protected void setGoal(AState goal) {
         if(goal != null) {
-            path = new ArrayList<AState>();
             AState tmp = goal;
             while (tmp != null) {
                 path.add(0, tmp);

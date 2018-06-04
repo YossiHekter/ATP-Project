@@ -33,8 +33,9 @@ public class Maze implements Serializable {
             row = 10;
             column = 10;
         }
-        mazeMatrix = new byte[row][column];
+        mazeMatrix = new byte[row][];
         for(int i = 0; i < row; i++){
+            mazeMatrix[i] = new byte[column];
             for(int j = 0; j < column; j++)
                 mazeMatrix[i][j]=1;
         }

@@ -2,6 +2,7 @@ package IO;
 
 import java.io.IOException;
 import java.io.InputStream;
+import java.util.ArrayList;
 
 /**
  * This class read a compressed maze from a file and decompress it
@@ -23,7 +24,7 @@ public class MyDecompressorInputStream extends InputStream {
     /**
      * This function read a integer in the input stream
      */
-    @Override
+
     public int read() {
         return 0;
     }
@@ -33,10 +34,17 @@ public class MyDecompressorInputStream extends InputStream {
      * @param input The array to decompress
      * @return '-1' if fail or '0' if success
      */
-    @Override
+
     public int read(byte[] input) {
         try {
-            byte[] arr = in.readAllBytes();
+            ArrayList<Byte> arrTmp = new ArrayList<>();
+            while (in.available() > 0)
+                arrTmp.add((byte) in.read());
+            byte[] arr = new byte[arrTmp.size()];
+            for(int i=0;i<arrTmp.size();i++){
+                arr[i] = arrTmp.get(i);
+            }
+            //byte[] arr = in.readAllBytes();
             decompressMaze(input, arr);
             return 0;
         } catch (IOException e) {
@@ -78,8 +86,8 @@ public class MyDecompressorInputStream extends InputStream {
         int bin = b;
         if(bin < 0)
             bin = bin + 256;
-        String bineryTowrite = Integer.toBinaryString(bin);
-        bineryTowrite = addZeroToBinery(bineryTowrite);
+        String bineryToWrite = Integer.toBinaryString(bin);
+        bineryToWrite = addZeroToBinery(bineryToWrite);
         i = index;
         int size = 0;
         while (i < decompress.length){
@@ -90,7 +98,7 @@ public class MyDecompressorInputStream extends InputStream {
         int j = 8 - size;
         for(;j<8;j++) {
             index = nextFreeSpace(decompress, index);
-            char x = bineryTowrite.charAt(j);
+            char x = bineryToWrite.charAt(j);
             if(x == '0')
                 decompress[index] = 0;
             else
