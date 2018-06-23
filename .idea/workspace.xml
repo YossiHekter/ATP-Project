@@ -2,11 +2,13 @@
 <project version="4">
   <component name="ArtifactsWorkspaceSettings">
     <artifacts-to-build>
-      <artifact name="ATP - Project - PartB:jar" />
+      <artifact name="ATPJavaFX:jar" />
     </artifacts-to-build>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="919442f4-9ae5-4e7c-8f3f-c1d20466ca30" name="Default" comment="" />
+    <list default="true" id="cdb932d9-7e58-4d94-93a9-e7b232ef17da" name="Default" comment="" />
+    <ignored path="JavaFxApplication.iws" />
+    <ignored path=".idea/workspace.xml" />
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -15,13 +17,94 @@
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
+  <component name="CoverageDataManager">
+    <SUITE FILE_PATH="coverage/ATPJavaFX$main.ic" NAME="main Coverage Results" MODIFIED="1528887747465" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
+      <FILTER>View.*</FILTER>
+    </SUITE>
+  </component>
+  <component name="CreatePatchCommitExecutor">
+    <option name="PATCH_PATH" value="" />
+  </component>
+  <component name="DatabaseView">
+    <option name="SHOW_INTERMEDIATE" value="true" />
+    <option name="GROUP_DATA_SOURCES" value="true" />
+    <option name="GROUP_SCHEMA" value="true" />
+    <option name="GROUP_CONTENTS" value="false" />
+    <option name="SORT_POSITIONED" value="false" />
+    <option name="SHOW_EMPTY_GROUPS" value="false" />
+    <option name="AUTO_SCROLL_FROM_SOURCE" value="false" />
+    <option name="HIDDEN_KINDS">
+      <set />
+    </option>
+    <expand />
+    <select />
+  </component>
+  <component name="DebuggerManager">
+    <breakpoint_any default_suspend_policy="SuspendAll" default_condition_enabled="true" converted="true">
+      <breakpoint>
+        <option name="NOTIFY_CAUGHT" value="true" />
+        <option name="NOTIFY_UNCAUGHT" value="true" />
+        <option name="ENABLED" value="false" />
+        <option name="LOG_ENABLED" value="false" />
+        <option name="LOG_EXPRESSION_ENABLED" value="false" />
+        <option name="SUSPEND_POLICY" value="SuspendAll" />
+        <option name="SUSPEND" value="true" />
+        <option name="COUNT_FILTER_ENABLED" value="false" />
+        <option name="COUNT_FILTER" value="0" />
+        <option name="CONDITION_ENABLED" value="true" />
+        <option name="CLASS_FILTERS_ENABLED" value="false" />
+        <option name="INSTANCE_FILTERS_ENABLED" value="false" />
+        <option name="CONDITION" value="" />
+        <option name="LOG_MESSAGE" value="" />
+      </breakpoint>
+      <breakpoint>
+        <option name="NOTIFY_CAUGHT" value="true" />
+        <option name="NOTIFY_UNCAUGHT" value="true" />
+        <option name="ENABLED" value="false" />
+        <option name="LOG_ENABLED" value="false" />
+        <option name="LOG_EXPRESSION_ENABLED" value="false" />
+        <option name="SUSPEND_POLICY" value="SuspendAll" />
+        <option name="SUSPEND" value="true" />
+        <option name="COUNT_FILTER_ENABLED" value="false" />
+        <option name="COUNT_FILTER" value="0" />
+        <option name="CONDITION_ENABLED" value="true" />
+        <option name="CLASS_FILTERS_ENABLED" value="false" />
+        <option name="INSTANCE_FILTERS_ENABLED" value="false" />
+        <option name="CONDITION" value="" />
+        <option name="LOG_MESSAGE" value="" />
+      </breakpoint>
+    </breakpoint_any>
+    <ui_properties converted="true" />
+    <breakpoint_rules converted="true" />
+  </component>
+  <component name="FavoritesManager">
+    <favorites_list name="JavaFxApplication" />
+  </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="ServerStrategyGenerateMaze.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/Server/ServerStrategyGenerateMaze.java">
+      <file leaf-file-name="MyViewController.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/View/MyViewController.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="289">
-              <caret line="32" selection-start-line="32" selection-end-line="32" />
+            <state relative-caret-position="884">
+              <caret line="70" column="54" selection-start-line="70" selection-start-column="54" selection-end-line="70" selection-end-column="54" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="MyViewModel.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/ViewModel/MyViewModel.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="1615">
+              <caret line="105" selection-start-line="105" selection-end-line="105" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Prop.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/View/Prop.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="663">
+              <caret line="46" column="91" selection-start-line="46" selection-start-column="37" selection-end-line="46" selection-end-column="91" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -29,77 +112,52 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="RunMazeGenerator.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/test/RunMazeGenerator.java">
+      <file leaf-file-name="HelpView.fxml" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/View/HelpView.fxml">
+          <provider editor-type-id="JavaFX-Scene-Builder" />
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="281">
-              <caret line="20" selection-start-line="20" selection-end-line="20" />
+            <state relative-caret-position="238">
+              <caret line="14" selection-start-line="14" selection-end-line="14" />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="SimpleMazeGenerator.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/algorithms/mazeGenerators/SimpleMazeGenerator.java">
+      <file leaf-file-name="SaveBox.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/View/SaveBox.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="550">
-              <caret line="81" column="19" selection-start-line="81" selection-start-column="19" selection-end-line="81" selection-end-column="19" />
+            <state relative-caret-position="765">
+              <caret line="48" selection-start-line="48" selection-end-line="48" />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Maze.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/algorithms/mazeGenerators/Maze.java">
+      <file leaf-file-name="main.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/View/main.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="550">
-              <caret line="65" selection-start-line="65" selection-end-line="65" />
+            <state relative-caret-position="612">
+              <caret line="48" column="15" selection-start-line="48" selection-start-column="15" selection-end-line="48" selection-end-column="15" />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Server.java" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/Server/Server.java">
+      <file leaf-file-name="MyModel.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/Model/MyModel.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="811">
-              <caret line="188" column="51" selection-start-line="188" selection-start-column="51" selection-end-line="188" selection-end-column="51" />
+            <state relative-caret-position="7089">
+              <caret line="436" column="42" selection-start-line="436" selection-start-column="42" selection-end-line="436" selection-end-column="42" />
               <folding>
-                <element signature="e#6757#6758#0" expanded="true" />
-                <element signature="e#6804#6805#0" expanded="true" />
-                <element signature="e#7061#7062#0" expanded="true" />
-                <element signature="e#7108#7109#0" expanded="true" />
-                <element signature="e#7325#7326#0" expanded="true" />
-                <element signature="e#7369#7370#0" expanded="true" />
+                <element signature="e#11544#11545#0" expanded="true" />
+                <element signature="e#11587#11588#0" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Position.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/algorithms/mazeGenerators/Position.java">
+      <file leaf-file-name="MazeDisplayer.java" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/View/MazeDisplayer.java">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="17">
-              <caret line="1" selection-start-line="1" selection-end-line="1" />
-              <folding>
-                <element signature="e#945#946#0" expanded="true" />
-                <element signature="e#971#972#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="ServerStrategySolveSearchProblem.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/Server/ServerStrategySolveSearchProblem.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="476">
-              <caret line="35" column="30" selection-start-line="35" selection-start-column="30" selection-end-line="35" selection-end-column="30" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="RunCommunicateWithServers.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/test/RunCommunicateWithServers.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="527">
-              <caret line="42" column="59" selection-start-line="42" selection-start-column="45" selection-end-line="42" selection-end-column="59" />
+              <caret line="164" column="18" selection-start-line="164" selection-start-column="18" selection-end-line="164" selection-end-column="18" />
             </state>
           </provider>
         </entry>
@@ -111,71 +169,82 @@
       <list>
         <option value="Interface" />
         <option value="Class" />
-        <option value="JUnit5 Test Class" />
+        <option value="FxmlFile" />
       </list>
     </option>
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>createStateString</find>
-      <find>readAllBytes</find>
-      <find>pars</find>
-      <find>parseInt</find>
-      <find>Integer</find>
-      <find>integer</find>
+      <find>maze</find>
+      <find>displayMaze</find>
+      <find>update</find>
+      <find>(e</find>
+      <find>window</find>
+      <find>Byte</find>
+      <find>get</find>
+      <find>Vga</find>
+      <find>grd</find>
+      <find>mazedis</find>
+      <find>setImageFileNameWall</find>
+      <find>redraw</find>
+      <find>this</find>
+      <find>aler</find>
+      <find>con</find>
+      <find>generateBO</find>
+      <find>Help</find>
+      <find>generate</find>
+      <find>key</find>
+      <find>loa</find>
+      <find>getHin</find>
+      <find>hint</find>
+      <find>ale</find>
+      <find>help</find>
+      <find>set</find>
+      <find>freeWay</find>
+      <find>setFields</find>
+      <find>wall</find>
+      <find>syste</find>
+      <find>mute</find>
     </findStrings>
+  </component>
+  <component name="FindManager">
+    <FindUsagesManager>
+      <setting name="OPEN_NEW_TAB" value="false" />
+    </FindUsagesManager>
   </component>
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/algorithms/AMazeGenerator.java" />
-        <option value="$PROJECT_DIR$/algorithms/IMazeGenerator.java" />
-        <option value="$PROJECT_DIR$/algorithms/Maze.java" />
-        <option value="$PROJECT_DIR$/algorithms/MyMazeGenerator.java" />
-        <option value="$PROJECT_DIR$/algorithms/Position.java" />
-        <option value="$PROJECT_DIR$/algorithms/SimpleMazeGenerator.java" />
-        <option value="$PROJECT_DIR$/algorithms/search/ASearchingAlgorithm.java" />
-        <option value="$PROJECT_DIR$/algorithms/search/AState.java" />
-        <option value="$PROJECT_DIR$/algorithms/search/ISearchable.java" />
-        <option value="$PROJECT_DIR$/algorithms/search/ISearchingAlgorithm.java" />
-        <option value="$PROJECT_DIR$/algorithms/search/MazeState.java" />
-        <option value="$PROJECT_DIR$/algorithms/search/SearchableMaze.java" />
-        <option value="$PROJECT_DIR$/algorithms/search/Solution.java" />
-        <option value="$PROJECT_DIR$/algorithms/search/BestFirstSearch.java" />
-        <option value="$PROJECT_DIR$/JUnit/algorithms/search/JUnitTestingBestFirstSearch.java" />
-        <option value="$PROJECT_DIR$/algorithms/search/BreadthFirstSearch.java" />
-        <option value="$PROJECT_DIR$/algorithms/search/DepthFirstSearch.java" />
-        <option value="$PROJECT_DIR$/src/algorithms/mazeGenerators/AMazeGenerator.java" />
-        <option value="$PROJECT_DIR$/JUnit/algorithms/search/BestFirstSearchTest.java" />
-        <option value="$PROJECT_DIR$/algorithms/mazeGenerators/IMazeGenerator.java" />
-        <option value="$PROJECT_DIR$/algorithms/mazeGenerators/AMazeGenerator.java" />
-        <option value="$PROJECT_DIR$/algorithms/mazeGenerators/Position.java" />
-        <option value="$PROJECT_DIR$/test/RunMazeGenerator.java" />
-        <option value="$PROJECT_DIR$/test/RunSearchOnMaze.java" />
-        <option value="$PROJECT_DIR$/algorithms/mazeGenerators/Maze.java" />
-        <option value="$PROJECT_DIR$/src/algorithms/search/ISearchable.java" />
-        <option value="$PROJECT_DIR$/src/algorithms/mazeGenerators/Position.java" />
-        <option value="$PROJECT_DIR$/src/JUnit/algorithms/search/JUnitTestingBestFirstSearch.java" />
-        <option value="$PROJECT_DIR$/src/algorithms/search/BestFirstSearch.java" />
-        <option value="$PROJECT_DIR$/src/algorithms/search/BreadthFirstSearch.java" />
-        <option value="$PROJECT_DIR$/src/algorithms/search/DepthFirstSearch.java" />
-        <option value="$PROJECT_DIR$/src/algorithms/search/SearchableMaze.java" />
-        <option value="$PROJECT_DIR$/src/test/RunMazeGenerator.java" />
-        <option value="$PROJECT_DIR$/src/test/RunSearchOnMaze.java" />
-        <option value="$PROJECT_DIR$/src/algorithms/search/Solution.java" />
-        <option value="$PROJECT_DIR$/src/Client/IClientStrategy.java" />
-        <option value="$PROJECT_DIR$/src/Server/IServerStrategy.java" />
-        <option value="$PROJECT_DIR$/src/Server/ServerStrategySolveSearchProblem.java" />
-        <option value="$PROJECT_DIR$/src/test/RunCompressDecompressMaze.java" />
-        <option value="$PROJECT_DIR$/Resources/config.properties" />
-        <option value="$PROJECT_DIR$/src/IO/MyCompressorOutputStream.java" />
-        <option value="$PROJECT_DIR$/src/IO/MyDecompressorInputStream.java" />
-        <option value="$PROJECT_DIR$/src/Client/Client.java" />
-        <option value="$PROJECT_DIR$/src/test/RunCommunicateWithServers.java" />
-        <option value="$PROJECT_DIR$/src/Server/ServerStrategyGenerateMaze.java" />
-        <option value="$PROJECT_DIR$/src/algorithms/mazeGenerators/SimpleMazeGenerator.java" />
-        <option value="$PROJECT_DIR$/src/algorithms/mazeGenerators/Maze.java" />
-        <option value="$PROJECT_DIR$/src/Server/Server.java" />
+        <option value="$PROJECT_DIR$/src/sample/Main.java" />
+        <option value="$PROJECT_DIR$/src/View/Main.java" />
+        <option value="$PROJECT_DIR$/src/View/mazeDisplayer.java" />
+        <option value="$PROJECT_DIR$/src/Model/ViewModel.java" />
+        <option value="$PROJECT_DIR$/src/View/Generate_maze.fxml" />
+        <option value="$PROJECT_DIR$/src/View/GenerateBox.fxml" />
+        <option value="$PROJECT_DIR$/src/View/GenerateBoxController.java" />
+        <option value="$PROJECT_DIR$/src/View/LoadMaze.java" />
+        <option value="$PROJECT_DIR$/src/View/Properties.java" />
+        <option value="$PROJECT_DIR$/src/View/PropView.fxml" />
+        <option value="$PROJECT_DIR$/src/View/Audio.java" />
+        <option value="$PROJECT_DIR$/src/View/MyAudio.java" />
+        <option value="$PROJECT_DIR$/src/View/Prop.java" />
+        <option value="$PROJECT_DIR$/src/View/AboutView.fxml" />
+        <option value="$PROJECT_DIR$/src/View/About.java" />
+        <option value="$PROJECT_DIR$/src/View/SaveBox.java" />
+        <option value="$PROJECT_DIR$/src/View/IView.java" />
+        <option value="$PROJECT_DIR$/src/View/GenerateBox.java" />
+        <option value="$PROJECT_DIR$/src/View/Help.java" />
+        <option value="$PROJECT_DIR$/src/View/LoadBox.java" />
+        <option value="$PROJECT_DIR$/src/View/MazeDisplayer.java" />
+        <option value="$PROJECT_DIR$/src/View/MyView.fxml" />
+        <option value="$PROJECT_DIR$/src/Model/IModel.java" />
+        <option value="$PROJECT_DIR$/src/ViewModel/MyViewModel.java" />
+        <option value="$PROJECT_DIR$/src/View/main.java" />
+        <option value="$PROJECT_DIR$/src/Model/MyModel.java" />
+        <option value="$PROJECT_DIR$/src/View/GameRolls.java" />
+        <option value="$PROJECT_DIR$/src/View/GameRollsView.fxml" />
+        <option value="$PROJECT_DIR$/src/View/HelpView.fxml" />
+        <option value="$PROJECT_DIR$/src/View/MyViewController.java" />
       </list>
     </option>
   </component>
@@ -185,88 +254,108 @@
     <detection-done>true</detection-done>
     <sorting>DEFINITION_ORDER</sorting>
   </component>
+  <component name="MavenProjectNavigator">
+    <treeState>
+      <expand />
+      <select />
+    </treeState>
+  </component>
+  <component name="MavenRunner">
+    <option name="jreName" value="1.8" />
+  </component>
   <component name="NodePackageJsonFileManager">
     <packageJsonPaths />
   </component>
+  <component name="PhpWorkspaceProjectConfiguration" backward_compatibility_performed="true" />
   <component name="ProjectFrameBounds" extendedState="6">
     <option name="x" value="-7" />
     <option name="width" value="726" />
     <option name="height" value="735" />
+  </component>
+  <component name="ProjectReloadState">
+    <option name="STATE" value="0" />
   </component>
   <component name="ProjectView">
     <navigator proportions="" version="1">
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
             <path>
-              <item name="pro" type="b2602c69:ProjectViewProjectNode" />
-              <item name="pro" type="462c0819:PsiDirectoryNode" />
+              <item name="javaFX" type="b2602c69:ProjectViewProjectNode" />
+              <item name="javaFX" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
-              <item name="pro" type="b2602c69:ProjectViewProjectNode" />
-              <item name="pro" type="462c0819:PsiDirectoryNode" />
+              <item name="javaFX" type="b2602c69:ProjectViewProjectNode" />
+              <item name="javaFX" type="462c0819:PsiDirectoryNode" />
+              <item name="out" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="javaFX" type="b2602c69:ProjectViewProjectNode" />
+              <item name="javaFX" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
-              <item name="pro" type="b2602c69:ProjectViewProjectNode" />
-              <item name="pro" type="462c0819:PsiDirectoryNode" />
+              <item name="javaFX" type="b2602c69:ProjectViewProjectNode" />
+              <item name="javaFX" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="Server" type="462c0819:PsiDirectoryNode" />
-            </path>
-          </expand>
-          <select />
-        </subPane>
-      </pane>
-      <pane id="PackagesPane">
-        <subPane>
-          <expand>
-            <path>
-              <item name="203722475_205592991" type="58d84e3e:PackageViewProjectNode" />
-              <item name="ATP - Project - PartB" type="616d4139:PackageViewModuleNode" />
+              <item name="Model" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
-              <item name="203722475_205592991" type="58d84e3e:PackageViewProjectNode" />
-              <item name="ATP - Project - PartB" type="616d4139:PackageViewModuleNode" />
-              <item name="algorithms" type="1f31426a:PackageElementNode" />
+              <item name="javaFX" type="b2602c69:ProjectViewProjectNode" />
+              <item name="javaFX" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="View" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
-              <item name="203722475_205592991" type="58d84e3e:PackageViewProjectNode" />
-              <item name="ATP - Project - PartB" type="616d4139:PackageViewModuleNode" />
-              <item name="IO" type="1f31426a:PackageElementNode" />
+              <item name="javaFX" type="b2602c69:ProjectViewProjectNode" />
+              <item name="javaFX" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="ViewModel" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
         </subPane>
       </pane>
       <pane id="AndroidView" />
+      <pane id="Scope" />
+      <pane id="PackagesPane">
+        <subPane>
+          <expand>
+            <path>
+              <item name="javaFX" type="58d84e3e:PackageViewProjectNode" />
+              <item name="ATPJavaFX" type="616d4139:PackageViewModuleNode" />
+            </path>
+          </expand>
+          <select />
+        </subPane>
+      </pane>
     </panes>
   </component>
   <component name="PropertiesComponent">
-    <property name="Downloaded.Files.Path.Enabled" value="false" />
-    <property name="Repository.Attach.JavaDocs" value="false" />
-    <property name="Repository.Attach.Sources" value="false" />
+    <property name="GoToClass.includeLibraries" value="false" />
+    <property name="GoToClass.toSaveIncludeLibraries" value="false" />
+    <property name="GoToFile.includeJavaFiles" value="false" />
+    <property name="MemberChooser.copyJavadoc" value="false" />
+    <property name="MemberChooser.showClasses" value="true" />
+    <property name="MemberChooser.sorted" value="false" />
+    <property name="OverrideImplement.combined" value="false" />
+    <property name="SearchEverywhereHistoryKey" value="SCENE BU&#9;PSI&#9;JAVA://com.sun.javafx.fxml.builder.JavaFXSceneBuilder&#10;gluon&#9;ACTION&#9;FunctionConfig" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrary" value="JUnit5" />
-    <property name="com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.JUnit5" value="" />
+    <property name="dynamic.classpath" value="false" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
-    <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
-    <property name="nodejs_npm_path_reset_for_default_project" value="true" />
     <property name="project.structure.last.edited" value="Artifacts" />
     <property name="project.structure.proportion" value="0.15" />
     <property name="project.structure.side.proportion" value="0.2" />
-    <property name="settings.editor.selected.configurable" value="configurable.group.language" />
+    <property name="recentsLimit" value="5" />
+    <property name="settings.editor.selected.configurable" value="reference.settings.project.maven.runner" />
   </component>
   <component name="RecentsManager">
-    <key name="CreateTestDialog.RecentsKey">
-      <recent name="algorithms.search" />
-    </key>
-    <key name="CreateTestDialog.Recents.Supers">
-      <recent name="" />
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\אני\Desktop\ATPJavaFX\src\View" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -281,76 +370,47 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Application.RunCommunicateWithServers">
-    <configuration name="JUnitTestingBestFirstSearch" type="AndroidJUnit" factoryName="Android JUnit" nameIsGenerated="true">
-      <module name="ATP - Project - PartB" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="algorithms.search.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
-      <option name="ALTERNATIVE_JRE_PATH" />
-      <option name="PACKAGE_NAME" value="algorithms.search" />
-      <option name="MAIN_CLASS_NAME" value="algorithms.search.JUnitTestingBestFirstSearch" />
-      <option name="METHOD_NAME" />
-      <option name="TEST_OBJECT" value="class" />
-      <option name="VM_PARAMETERS" />
-      <option name="PARAMETERS" />
-      <option name="WORKING_DIRECTORY" />
-      <option name="PASS_PARENT_ENVS" value="true" />
-      <option name="TEST_SEARCH_SCOPE">
-        <value defaultName="singleModule" />
-      </option>
-      <patterns />
+  <component name="RunManager" selected="Application.main">
+    <configuration default="true" type="Applet" factoryName="Applet">
+      <option name="POLICY_FILE" value="$APPLICATION_HOME_DIR$/bin/appletviewer.policy" />
     </configuration>
-    <configuration name="RunCommunicateWithServers" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="test.RunCommunicateWithServers" />
-      <module name="ATP - Project - PartB" />
+    <configuration name="Main" type="Application" factoryName="Application">
+      <option name="MAIN_CLASS_NAME" value="View.Main" />
+      <module name="ATPJavaFX" />
       <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="test.*" />
+          <option name="PATTERN" value="View.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
+      <RunnerSettings RunnerId="Run" />
+      <ConfigurationWrapper RunnerId="Run" />
     </configuration>
-    <configuration name="RunCompressDecompressMaze" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="test.RunCompressDecompressMaze" />
-      <module name="ATP - Project - PartB" />
+    <configuration name="MyViewController" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="View.MyViewController" />
+      <module name="ATPJavaFX" />
       <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="test.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-    </configuration>
-    <configuration name="RunMazeGenerator" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="test.RunMazeGenerator" />
-      <module name="ATP - Project - PartB" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="test.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-    </configuration>
-    <configuration name="RunSearchOnMaze" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="test.RunSearchOnMaze" />
-      <module name="ATP - Project - PartB" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="test.*" />
+          <option name="PATTERN" value="View.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
     </configuration>
     <configuration default="true" type="Application" factoryName="Application">
       <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+    </configuration>
+    <configuration name="main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="View.main" />
+      <module name="ATPJavaFX" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="View.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
     </configuration>
     <configuration default="true" type="JUnit" factoryName="JUnit">
       <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
@@ -361,10 +421,10 @@
       <option name="TEST_OBJECT" value="class" />
       <option name="VM_PARAMETERS" value="-ea" />
       <option name="PARAMETERS" />
-      <option name="WORKING_DIRECTORY" value="%MODULE_WORKING_DIR%" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
       <option name="PASS_PARENT_ENVS" value="true" />
       <option name="TEST_SEARCH_SCOPE">
-        <value defaultName="singleModule" />
+        <value defaultName="moduleWithDependencies" />
       </option>
       <patterns />
     </configuration>
@@ -379,30 +439,44 @@
       <option name="TEST_OBJECT" value="CLASS" />
       <option name="VM_PARAMETERS" value="-ea" />
       <option name="PARAMETERS" />
-      <option name="WORKING_DIRECTORY" value="%MODULE_WORKING_DIR%" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
       <option name="OUTPUT_DIRECTORY" />
       <option name="PASS_PARENT_ENVS" value="true" />
       <option name="TEST_SEARCH_SCOPE">
-        <value defaultName="singleModule" />
+        <value defaultName="moduleWithDependencies" />
       </option>
       <option name="USE_DEFAULT_REPORTERS" value="false" />
       <option name="PROPERTIES_FILE" />
       <properties />
       <listeners />
     </configuration>
+    <configuration default="true" type="#org.jetbrains.idea.devkit.run.PluginConfigurationType" factoryName="Plugin">
+      <module name="" />
+      <option name="VM_PARAMETERS" value="-Xmx512m -Xms256m -XX:MaxPermSize=250m" />
+      <option name="PROGRAM_PARAMETERS" />
+      <predefined_log_file id="idea.log" enabled="true" />
+    </configuration>
+    <configuration default="true" type="DartUnitRunConfigurationType" factoryName="DartUnit">
+      <option name="VMOptions" />
+      <option name="arguments" />
+      <option name="filePath" />
+      <option name="scope" value="ALL" />
+      <option name="testName" />
+      <method />
+    </configuration>
+    <configuration name="&lt;template&gt;" type="WebApp" default="true" selected="false">
+      <Host>localhost</Host>
+      <Port>5050</Port>
+    </configuration>
     <list>
-      <item itemvalue="Android JUnit.JUnitTestingBestFirstSearch" />
-      <item itemvalue="Application.RunSearchOnMaze" />
-      <item itemvalue="Application.RunMazeGenerator" />
-      <item itemvalue="Application.RunCommunicateWithServers" />
-      <item itemvalue="Application.RunCompressDecompressMaze" />
+      <item itemvalue="Application.Main" />
+      <item itemvalue="Application.MyViewController" />
+      <item itemvalue="Application.main" />
     </list>
     <recent_temporary>
       <list>
-        <item itemvalue="Application.RunCommunicateWithServers" />
-        <item itemvalue="Application.RunMazeGenerator" />
-        <item itemvalue="Application.RunCompressDecompressMaze" />
-        <item itemvalue="Application.RunSearchOnMaze" />
+        <item itemvalue="Application.main" />
+        <item itemvalue="Application.MyViewController" />
       </list>
     </recent_temporary>
   </component>
@@ -411,125 +485,162 @@
   </component>
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
-      <changelist id="919442f4-9ae5-4e7c-8f3f-c1d20466ca30" name="Default" comment="" />
-      <created>1525077838315</created>
+      <changelist id="cdb932d9-7e58-4d94-93a9-e7b232ef17da" name="Default" comment="" />
+      <created>1359379246138</created>
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
-      <updated>1525077838315</updated>
-      <workItem from="1525077841471" duration="985000" />
-      <workItem from="1525079664082" duration="89000" />
-      <workItem from="1525079920173" duration="362000" />
-      <workItem from="1525080320633" duration="47000" />
-      <workItem from="1525087555993" duration="1075000" />
-      <workItem from="1525088879796" duration="15000" />
-      <workItem from="1525097865657" duration="225000" />
-      <workItem from="1525100273570" duration="726000" />
-      <workItem from="1525101256108" duration="407000" />
-      <workItem from="1525114982083" duration="62000" />
-      <workItem from="1525152567973" duration="1807000" />
-      <workItem from="1525168582959" duration="1510000" />
-      <workItem from="1525175996661" duration="137000" />
-      <workItem from="1525176604585" duration="1549000" />
-      <workItem from="1525191195333" duration="124000" />
-      <workItem from="1525191426634" duration="13000" />
-      <workItem from="1525192499600" duration="454000" />
-      <workItem from="1525254257669" duration="138000" />
-      <workItem from="1527939238088" duration="535000" />
-      <workItem from="1527939826578" duration="159000" />
-      <workItem from="1527940082806" duration="3784000" />
-      <workItem from="1527991387340" duration="2381000" />
-      <workItem from="1527995038804" duration="300000" />
-      <workItem from="1527996861245" duration="274000" />
-      <workItem from="1527997231659" duration="75000" />
-      <workItem from="1527999620923" duration="61000" />
-      <workItem from="1527999733849" duration="152000" />
-      <workItem from="1528005862710" duration="172000" />
-      <workItem from="1528008167496" duration="361000" />
-      <workItem from="1528008626248" duration="43000" />
-      <workItem from="1528010230581" duration="156000" />
-      <workItem from="1528011979271" duration="791000" />
-      <workItem from="1528012872344" duration="1430000" />
-      <workItem from="1528014878255" duration="497000" />
-      <workItem from="1528015459428" duration="408000" />
-      <workItem from="1528015972532" duration="163000" />
-      <workItem from="1528018281223" duration="267000" />
-      <workItem from="1528018595674" duration="810000" />
-      <workItem from="1528019490857" duration="610000" />
-      <workItem from="1528021138632" duration="239000" />
-      <workItem from="1528021519601" duration="527000" />
-      <workItem from="1528025923481" duration="1055000" />
-      <workItem from="1528035916285" duration="639000" />
-      <workItem from="1528043758750" duration="781000" />
-      <workItem from="1528047955118" duration="333000" />
+      <updated>1359379246138</updated>
+      <workItem from="1359379250712" duration="1302000" />
+      <workItem from="1528209114991" duration="1130000" />
+      <workItem from="1528213227368" duration="5500000" />
+      <workItem from="1528226241418" duration="41000" />
+      <workItem from="1528301965953" duration="369000" />
+      <workItem from="1528302361017" duration="2148000" />
+      <workItem from="1528305497899" duration="62000" />
+      <workItem from="1528305697346" duration="784000" />
+      <workItem from="1528323554091" duration="66000" />
+      <workItem from="1528351778935" duration="676000" />
+      <workItem from="1528353197123" duration="1506000" />
+      <workItem from="1528355513487" duration="1061000" />
+      <workItem from="1528362654044" duration="2923000" />
+      <workItem from="1528381797835" duration="4527000" />
+      <workItem from="1528386970613" duration="1041000" />
+      <workItem from="1528451364242" duration="3201000" />
+      <workItem from="1528460182389" duration="6439000" />
+      <workItem from="1528466940630" duration="3714000" />
+      <workItem from="1528491109108" duration="575000" />
+      <workItem from="1528491713903" duration="638000" />
+      <workItem from="1528529962108" duration="87000" />
+      <workItem from="1528530088598" duration="39000" />
+      <workItem from="1528530729438" duration="2710000" />
+      <workItem from="1528565139771" duration="636000" />
+      <workItem from="1528636640595" duration="706000" />
+      <workItem from="1528637423746" duration="1274000" />
+      <workItem from="1528638731241" duration="1081000" />
+      <workItem from="1528639911581" duration="10457000" />
+      <workItem from="1528655737888" duration="3410000" />
+      <workItem from="1528700689415" duration="383000" />
+      <workItem from="1528711276862" duration="259000" />
+      <workItem from="1528711637707" duration="227000" />
+      <workItem from="1528711896932" duration="27000" />
+      <workItem from="1528712026592" duration="100000" />
+      <workItem from="1528712350186" duration="304000" />
+      <workItem from="1528712748087" duration="375000" />
+      <workItem from="1528713208908" duration="393000" />
+      <workItem from="1528714065486" duration="656000" />
+      <workItem from="1528715057431" duration="562000" />
+      <workItem from="1528721000771" duration="18137000" />
+      <workItem from="1528739197897" duration="24000" />
+      <workItem from="1528739530576" duration="97000" />
+      <workItem from="1528744252203" duration="1962000" />
+      <workItem from="1528746531290" duration="1680000" />
+      <workItem from="1528748387735" duration="547000" />
+      <workItem from="1528749375362" duration="132000" />
+      <workItem from="1528797980387" duration="645000" />
+      <workItem from="1528802667528" duration="2084000" />
+      <workItem from="1528809413178" duration="581000" />
+      <workItem from="1528810056412" duration="47000" />
+      <workItem from="1528811767991" duration="124000" />
+      <workItem from="1528811916842" duration="21000" />
+      <workItem from="1528812276803" duration="316000" />
+      <workItem from="1528812701561" duration="6470000" />
+      <workItem from="1528830222300" duration="97000" />
+      <workItem from="1528830366716" duration="782000" />
+      <workItem from="1528831261649" duration="84000" />
+      <workItem from="1528871163711" duration="1844000" />
+      <workItem from="1528882147209" duration="1214000" />
+      <workItem from="1528883635194" duration="269000" />
+      <workItem from="1528885061165" duration="1823000" />
+      <workItem from="1528886926217" duration="126000" />
+      <workItem from="1528887074973" duration="1800000" />
+      <workItem from="1528888905639" duration="165000" />
+      <workItem from="1528889094200" duration="811000" />
+      <workItem from="1528889932201" duration="958000" />
+      <workItem from="1528890922146" duration="182000" />
+      <workItem from="1528895247614" duration="1130000" />
+      <workItem from="1528900160989" duration="4053000" />
+      <workItem from="1528904276608" duration="1253000" />
+      <workItem from="1528905564103" duration="2873000" />
+      <workItem from="1528908925040" duration="3641000" />
+      <workItem from="1528918646159" duration="5735000" />
+      <workItem from="1528925174227" duration="2298000" />
+      <workItem from="1528927513608" duration="41000" />
+      <workItem from="1528956699691" duration="1265000" />
+      <workItem from="1528958115631" duration="287000" />
+      <workItem from="1528958504998" duration="367000" />
+      <workItem from="1528983683309" duration="5524000" />
+      <workItem from="1529005697221" duration="2900000" />
+      <workItem from="1529017534941" duration="1435000" />
+      <workItem from="1529047346397" duration="6560000" />
+      <workItem from="1529058241829" duration="3332000" />
+      <workItem from="1529062513125" duration="527000" />
+      <workItem from="1529063067326" duration="554000" />
+      <workItem from="1529063736180" duration="3160000" />
+      <workItem from="1529089305425" duration="374000" />
+      <workItem from="1529137510290" duration="6537000" />
+      <workItem from="1529144303812" duration="604000" />
+      <workItem from="1529145093288" duration="23000" />
+      <workItem from="1529156710852" duration="5399000" />
+      <workItem from="1529163554441" duration="325000" />
+      <workItem from="1529169646546" duration="1530000" />
+      <workItem from="1529201474255" duration="4367000" />
+      <workItem from="1529212165515" duration="4952000" />
+      <workItem from="1529217224174" duration="201000" />
+      <workItem from="1529219364569" duration="186000" />
+      <workItem from="1529243451750" duration="9106000" />
+      <workItem from="1529263081465" duration="3579000" />
+      <workItem from="1529266707837" duration="130000" />
+      <workItem from="1529267105842" duration="623000" />
+      <workItem from="1529270286448" duration="673000" />
+      <workItem from="1529270991065" duration="200000" />
+      <workItem from="1529271216726" duration="215000" />
+      <workItem from="1529314447416" duration="890000" />
+      <workItem from="1529323040922" duration="602000" />
+      <workItem from="1529576471993" duration="252000" />
+      <workItem from="1529576814533" duration="100000" />
     </task>
     <servers />
   </component>
-  <component name="TestHistory">
-    <history-entry file="JUnitTestingBestFirstSearch_solve - 2018.04.30 at 12h 00m 27s.xml">
-      <configuration name="JUnitTestingBestFirstSearch.solve" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="JUnitTestingBestFirstSearch - 2018.04.30 at 14h 43m 17s.xml">
-      <configuration name="JUnitTestingBestFirstSearch" configurationId="AndroidJUnit" />
-    </history-entry>
-    <history-entry file="JUnitTestingBestFirstSearch - 2018.04.30 at 18h 14m 36s.xml">
-      <configuration name="JUnitTestingBestFirstSearch" configurationId="AndroidJUnit" />
-    </history-entry>
-    <history-entry file="JUnitTestingBestFirstSearch - 2018.04.30 at 18h 18m 50s.xml">
-      <configuration name="JUnitTestingBestFirstSearch" configurationId="AndroidJUnit" />
-    </history-entry>
-    <history-entry file="JUnitTestingBestFirstSearch - 2018.04.30 at 22h 03m 20s.xml">
-      <configuration name="JUnitTestingBestFirstSearch" configurationId="AndroidJUnit" />
-    </history-entry>
-    <history-entry file="JUnitTestingBestFirstSearch - 2018.05.01 at 13h 17m 37s.xml">
-      <configuration name="JUnitTestingBestFirstSearch" configurationId="AndroidJUnit" />
-    </history-entry>
-    <history-entry file="JUnitTestingBestFirstSearch_solve - 2018.06.02 at 14h 38m 38s.xml">
-      <configuration name="JUnitTestingBestFirstSearch.solve" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="JUnitTestingBestFirstSearch_solve - 2018.06.02 at 14h 39m 11s.xml">
-      <configuration name="JUnitTestingBestFirstSearch.solve" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="JUnitTestingBestFirstSearch - 2018.06.02 at 14h 45m 14s.xml">
-      <configuration name="JUnitTestingBestFirstSearch" configurationId="AndroidJUnit" />
-    </history-entry>
-    <history-entry file="JUnitTestingBestFirstSearch - 2018.06.03 at 11h 06m 21s.xml">
-      <configuration name="JUnitTestingBestFirstSearch" configurationId="AndroidJUnit" />
-    </history-entry>
-  </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="26728000" />
+    <option name="totallyTimeSpent" value="197575000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
     <layout>
       <window_info anchor="right" id="Palette" order="3" />
       <window_info anchor="bottom" id="TODO" order="6" />
-      <window_info anchor="bottom" id="Messages" order="11" sideWeight="0.49853587" weight="0.32913387" />
-      <window_info anchor="right" id="Palette&#9;" order="8" />
+      <window_info anchor="right" id="Palette&#9;" order="7" />
       <window_info id="Image Layers" order="2" />
-      <window_info anchor="right" id="Capture Analysis" order="4" />
-      <window_info anchor="bottom" id="Event Log" order="9" sideWeight="0.50073206" side_tool="true" weight="0.4" />
-      <window_info anchor="right" id="Maven Projects" order="7" />
+      <window_info anchor="right" id="Capture Analysis" order="8" />
+      <window_info anchor="bottom" id="Event Log" order="7" side_tool="true" weight="0.32843137" />
+      <window_info anchor="right" id="Maven Projects" order="4" weight="0.32980332" />
       <window_info anchor="bottom" id="Database Changes" order="7" show_stripe_button="false" />
-      <window_info anchor="bottom" id="Version Control" order="10" show_stripe_button="false" />
-      <window_info anchor="bottom" id="Run" order="2" sideWeight="0.4956076" weight="0.32755905" />
-      <window_info anchor="bottom" id="Terminal" order="8" />
-      <window_info id="Capture Tool" order="6" />
-      <window_info id="Designer" order="3" />
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.30087847" />
-      <window_info anchor="right" id="Database" order="6" />
+      <window_info anchor="bottom" id="Version Control" order="7" show_stripe_button="false" />
+      <window_info anchor="bottom" id="Run" order="2" weight="0.2009804" />
+      <window_info anchor="bottom" id="Terminal" order="7" weight="0.32843137" />
+      <window_info id="Capture Tool" order="2" />
+      <window_info id="Designer" order="2" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.6703755" visible="true" weight="0.26399395" />
+      <window_info anchor="right" id="Database" order="5" weight="0.32980332" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
-      <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
-      <window_info id="UI Designer" order="4" />
-      <window_info anchor="right" id="Theme Preview" order="5" />
-      <window_info id="Favorites" order="5" side_tool="true" />
-      <window_info anchor="bottom" id="Debug" order="3" sideWeight="0.49926794" weight="0.39869282" />
-      <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
+      <window_info anchor="right" id="Ant Build" order="1" weight="0.32980332" />
+      <window_info id="UI Designer" order="2" />
+      <window_info anchor="right" id="Theme Preview" order="9" />
+      <window_info id="Favorites" order="2" side_tool="true" />
+      <window_info anchor="bottom" id="Debug" order="3" weight="0.42834646" />
+      <window_info anchor="right" id="JetGradle" order="6" />
+      <window_info anchor="bottom" id="Messages" order="7" weight="0.109477125" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
-      <window_info anchor="right" id="Commander" order="0" weight="0.4" />
-      <window_info anchor="bottom" id="Message" order="0" />
+      <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
+      <window_info anchor="bottom" id="Find" order="1" weight="0.22222222" />
+      <window_info anchor="bottom" id="Changes" order="7" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
-      <window_info anchor="bottom" id="Find" order="1" weight="0.32913387" />
+      <window_info anchor="bottom" id="Profiler" order="7" />
+      <window_info anchor="bottom" id="Problems" order="7" />
+      <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
+      <window_info anchor="bottom" id="Message" order="0" />
+      <window_info anchor="bottom" id="Application Servers" order="7" />
+      <window_info anchor="right" id="Coverage" order="9" side_tool="true" />
     </layout>
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -539,261 +650,235 @@
     <option name="myLimit" value="2678400000" />
   </component>
   <component name="VcsManagerConfiguration">
-    <ignored-roots>
-      <path value="$PROJECT_DIR$/.." />
-    </ignored-roots>
+    <option name="OFFER_MOVE_TO_ANOTHER_CHANGELIST_ON_PARTIAL_COMMIT" value="true" />
+    <option name="INCLUDE_TEXT_INTO_SHELF" value="false" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
       <breakpoints>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/test/RunMazeGenerator.java</url>
-          <line>17</line>
-          <properties />
-          <option name="timeStamp" value="21" />
+        <line-breakpoint enabled="true" type="java-method">
+          <url>file://$PROJECT_DIR$/src/View/Prop.java</url>
+          <line>24</line>
+          <properties class="View.Prop" method="showProperties">
+            <option name="EMULATED" value="true" />
+          </properties>
+          <option name="timeStamp" value="76" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/algorithms/mazeGenerators/Maze.java</url>
-          <line>41</line>
+          <url>file://$PROJECT_DIR$/src/View/MyViewController.java</url>
+          <line>201</line>
           <properties />
-          <option name="timeStamp" value="22" />
+          <option name="timeStamp" value="143" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/ViewModel/MyViewModel.java</url>
+          <line>100</line>
+          <properties />
+          <option name="timeStamp" value="144" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/Model/MyModel.java</url>
+          <line>404</line>
+          <properties />
+          <option name="timeStamp" value="145" />
         </line-breakpoint>
       </breakpoints>
-      <option name="time" value="23" />
+      <option name="time" value="146" />
     </breakpoint-manager>
   </component>
+  <component name="antWorkspaceConfiguration">
+    <option name="IS_AUTOSCROLL_TO_SOURCE" value="false" />
+    <option name="FILTER_TARGETS" value="false" />
+  </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/test/RunMazeGenerator.java" />
-    <entry file="file://$PROJECT_DIR$/algorithms/search/BestFirstSearch.java" />
-    <entry file="file://$PROJECT_DIR$/JUnit/algorithms/search/JUnitTestingBestFirstSearch.java" />
-    <entry file="file://$PROJECT_DIR$/algorithms/search/ASearchingAlgorithm.java" />
-    <entry file="file://$PROJECT_DIR$/algorithms/search/AState.java" />
-    <entry file="file://$PROJECT_DIR$/algorithms/search/ISearchable.java" />
-    <entry file="file://$PROJECT_DIR$/algorithms/search/ISearchingAlgorithm.java" />
-    <entry file="file://$PROJECT_DIR$/algorithms/search/MazeState.java" />
-    <entry file="file://$PROJECT_DIR$/algorithms/search/SearchableMaze.java" />
-    <entry file="file://$PROJECT_DIR$/algorithms/search/Solution.java" />
-    <entry file="file://$PROJECT_DIR$/algorithms/search/DepthFirstSearch.java" />
-    <entry file="file://$PROJECT_DIR$/algorithms/search/BreadthFirstSearch.java" />
-    <entry file="file://$PROJECT_DIR$/algorithms/search/BestFirstSearch.java" />
-    <entry file="file://$PROJECT_DIR$/JUnit/algorithms/search/JUnitTestingBestFirstSearch.java" />
-    <entry file="file://$PROJECT_DIR$/JUnit/algorithms/search/BestFirstSearchTest.java" />
-    <entry file="file://$PROJECT_DIR$/algorithms/mazeGenerators/IMazeGenerator.java" />
-    <entry file="file://$PROJECT_DIR$/algorithms/mazeGenerators/AMazeGenerator.java" />
-    <entry file="file://$PROJECT_DIR$/algorithms/mazeGenerators/SimpleMazeGenerator.java" />
-    <entry file="file://$PROJECT_DIR$/algorithms/mazeGenerators/Position.java" />
-    <entry file="file://$PROJECT_DIR$/test/RunSearchOnMaze.java" />
-    <entry file="file://$PROJECT_DIR$/algorithms/mazeGenerators/Maze.java" />
-    <entry file="file://$PROJECT_DIR$/algorithms/mazeGenerators/MyMazeGenerator.java" />
-    <entry file="file://$PROJECT_DIR$/src/algorithms/search/ASearchingAlgorithm.java">
+    <entry file="jar://C:/Program Files/Java/jdk-10.0.1/lib/src.zip!/javafx.controls/javafx/scene/control/TextInputControl.java" />
+    <entry file="jar://C:/Program Files/Java/jdk-10.0.1/lib/src.zip!/javafx.base/javafx/beans/property/DoublePropertyBase.java" />
+    <entry file="jar://C:/Program Files/Java/jdk-10.0.1/lib/src.zip!/javafx.graphics/javafx/stage/Stage.java" />
+    <entry file="jar://C:/Program Files/Java/jdk-10.0.1/lib/src.zip!/javafx.graphics/javafx/scene/Node.java" />
+    <entry file="jar://C:/Program Files/Java/jdk-10.0.1/lib/src.zip!/javafx.controls/javafx/scene/control/Button.java" />
+    <entry file="jar://C:/Program Files/Java/jdk-10.0.1/lib/src.zip!/javafx.graphics/javafx/scene/Scene.java" />
+    <entry file="jar://C:/Program Files/Java/jdk-10.0.1/lib/src.zip!/javafx.base/javafx/event/Event.java" />
+    <entry file="jar://C:/Program Files/Java/jdk-10.0.1/lib/src.zip!/javafx.graphics/javafx/scene/canvas/Canvas.java" />
+    <entry file="file://$PROJECT_DIR$/src/View/GenerateBox.fxml" />
+    <entry file="jar://C:/Program Files/Java/jdk-10.0.1/lib/src.zip!/javafx.fxml/javafx/fxml/FXMLLoader.java" />
+    <entry file="jar://$PROJECT_DIR$/../203722475_205592991_update9/out/artifacts/ATP___Project___PartB_jar/ATP - Project - PartB.jar!/Client/Client.class" />
+    <entry file="jar://C:/Program Files/Java/jdk-10.0.1/lib/src.zip!/java.base/java/util/Observable.java" />
+    <entry file="jar://C:/Program Files/Java/jdk1.8.0_172/javafx-src.zip!/javafx/fxml/Initializable.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="448">
+          <caret line="53" column="16" selection-start-line="53" selection-start-column="16" selection-end-line="53" selection-end-column="16" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/View/Properties.java" />
+    <entry file="file://$PROJECT_DIR$/src/View/PropView.fxml" />
+    <entry file="file://$PROJECT_DIR$/src/View/Audio.java" />
+    <entry file="file://$PROJECT_DIR$/src/View/MyAudio.java" />
+    <entry file="jar://C:/Program Files/Java/jdk1.8.0_172/javafx-src.zip!/com/sun/glass/ui/View.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="831">
+          <caret line="946" column="34" selection-start-line="946" selection-start-column="34" selection-end-line="946" selection-end-column="34" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../pro/src/algorithms/search/MazeState.java" />
+    <entry file="jar://$PROJECT_DIR$/Resources/ATP - Project - PartB.jar!/Client/Client.class" />
+    <entry file="jar://$PROJECT_DIR$/Resources/ATP - Project - PartB.jar!/algorithms/mazeGenerators/Position.class" />
+    <entry file="jar://$PROJECT_DIR$/Resources/ATP - Project - PartB.jar!/algorithms/search/MazeState.class" />
+    <entry file="file://$PROJECT_DIR$/../pro/src/algorithms/mazeGenerators/Position.java" />
+    <entry file="file://$PROJECT_DIR$/../pro/src/algorithms/search/SearchableMaze.java" />
+    <entry file="file://$PROJECT_DIR$/src/View/ViewStyle.css">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/View/AboutView.fxml">
+      <provider selected="true" editor-type-id="JavaFX-Scene-Builder" />
+      <provider editor-type-id="text-editor">
+        <state relative-caret-position="238">
+          <caret line="14" selection-start-line="14" selection-end-line="14" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/View/IView.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="102">
-          <caret line="6" column="22" selection-start-line="6" selection-start-column="22" selection-end-line="6" selection-end-column="22" />
+          <caret line="7" column="28" selection-start-line="7" selection-start-column="28" selection-end-line="7" selection-end-column="28" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/algorithms/search/DepthFirstSearch.java">
+    <entry file="file://$PROJECT_DIR$/src/View/GenerateBox.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="193">
-          <caret line="21" column="13" selection-start-line="21" selection-start-column="13" selection-end-line="21" selection-end-column="13" />
+        <state relative-caret-position="408">
+          <caret line="24" column="7" lean-forward="true" selection-start-line="24" selection-start-column="7" selection-end-line="24" selection-end-column="79" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/algorithms/search/BreadthFirstSearch.java">
+    <entry file="file://$PROJECT_DIR$/src/View/LoadBox.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="136">
-          <caret line="29" column="52" selection-start-line="29" selection-start-column="52" selection-end-line="29" selection-end-column="52" />
+        <state relative-caret-position="482">
+          <caret line="36" lean-forward="true" selection-start-line="36" selection-end-line="36" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/algorithms/mazeGenerators/MyMazeGenerator.java">
+    <entry file="file://$PROJECT_DIR$/src/View/About.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="425">
-          <caret line="71" column="12" selection-start-line="71" selection-start-column="12" selection-end-line="71" selection-end-column="12" />
+        <state relative-caret-position="306">
+          <caret line="24" column="26" lean-forward="true" selection-start-line="24" selection-start-column="26" selection-end-line="24" selection-end-column="26" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/RunSearchOnMaze.java">
+    <entry file="file://$USER_HOME$/pro/src/test/RunCommunicateWithServers.java" />
+    <entry file="file://$USER_HOME$/pro/src/test/RunCompressDecompressMaze.java" />
+    <entry file="file://$USER_HOME$/pro/src/Server/Server.java" />
+    <entry file="file://$USER_HOME$/ATPJavaFX/src/View/MyViewController.java" />
+    <entry file="file://$PROJECT_DIR$/src/View/MyView.fxml">
+      <provider selected="true" editor-type-id="JavaFX-Scene-Builder" />
+      <provider editor-type-id="text-editor">
+        <state relative-caret-position="2057">
+          <caret line="121" column="67" selection-start-line="121" selection-start-column="67" selection-end-line="121" selection-end-column="67" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Model/IModel.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="468">
-          <caret line="34" column="1" selection-start-line="34" selection-start-column="1" selection-end-line="34" selection-end-column="1" />
+        <state relative-caret-position="408">
+          <caret line="28" column="1" selection-start-line="28" selection-start-column="1" selection-end-line="28" selection-end-column="1" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/algorithms/mazeGenerators/AMazeGenerator.java">
+    <entry file="file://$PROJECT_DIR$/../pro/src/algorithms/mazeGenerators/Maze.java">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="jar://C:/Program Files/Java/jdk1.8.0_172/javafx-src.zip!/javafx/fxml/FXMLLoader.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="102">
-          <caret line="6" column="22" selection-start-line="6" selection-start-column="22" selection-end-line="6" selection-end-column="22" />
+        <state relative-caret-position="94">
+          <caret line="1657" selection-start-line="1657" selection-end-line="1657" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/algorithms/search/AState.java">
+    <entry file="jar://C:/Program Files/Java/jdk1.8.0_172/javafx-src.zip!/javafx/scene/Scene.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="136">
-          <caret line="8" column="22" selection-start-line="8" selection-start-column="22" selection-end-line="8" selection-end-column="22" />
+        <state relative-caret-position="146">
+          <caret line="3760" selection-start-line="3760" selection-end-line="3760" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/JUnit/algorithms/search/JUnitTestingBestFirstSearch.java">
+    <entry file="jar://C:/Program Files/Java/jdk1.8.0_172/javafx-src.zip!/javafx/event/Event.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="170">
-          <caret line="12" selection-start-line="12" selection-end-line="12" />
+        <state relative-caret-position="147">
+          <caret line="198" selection-start-line="198" selection-end-line="198" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/algorithms/search/MazeState.java">
+    <entry file="file://$PROJECT_DIR$/src/Model/MyModel.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="102">
-          <caret line="8" column="13" selection-start-line="8" selection-start-column="13" selection-end-line="8" selection-end-column="13" />
+        <state relative-caret-position="7089">
+          <caret line="436" column="42" selection-start-line="436" selection-start-column="42" selection-end-line="436" selection-end-column="42" />
+          <folding>
+            <element signature="e#11544#11545#0" expanded="true" />
+            <element signature="e#11587#11588#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/algorithms/search/SearchableMaze.java">
+    <entry file="file://$PROJECT_DIR$/src/View/GameRolls.java" />
+    <entry file="file://$PROJECT_DIR$/src/View/main.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="2890">
-          <caret line="176" column="88" selection-start-line="176" selection-start-column="88" selection-end-line="176" selection-end-column="88" />
+        <state relative-caret-position="612">
+          <caret line="48" column="15" selection-start-line="48" selection-start-column="15" selection-end-line="48" selection-end-column="15" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/algorithms/search/ISearchable.java">
+    <entry file="file://$PROJECT_DIR$/src/View/GameRollsView.fxml" />
+    <entry file="file://$PROJECT_DIR$/src/View/Help.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="68">
-          <caret line="4" selection-start-line="4" selection-end-line="7" selection-end-column="3" />
+        <state relative-caret-position="-51">
+          <caret line="18" column="3" selection-start-line="18" selection-start-column="3" selection-end-line="18" selection-end-column="3" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/Client/IClientStrategy.java">
+    <entry file="file://$PROJECT_DIR$/src/View/HelpView.fxml">
+      <provider editor-type-id="JavaFX-Scene-Builder" />
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="187">
-          <caret line="12" column="67" lean-forward="true" selection-start-line="12" selection-start-column="27" selection-end-line="12" selection-end-column="67" />
+        <state relative-caret-position="238">
+          <caret line="14" selection-start-line="14" selection-end-line="14" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/../ATP2018 - Lab7 - Client-Server Multithreaded/src/main/java/Server/Server.java" />
-    <entry file="file://$PROJECT_DIR$/src/Server/IServerStrategy.java">
+    <entry file="file://$PROJECT_DIR$/src/View/SaveBox.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="221">
-          <caret line="14" column="44" selection-start-line="14" selection-start-column="44" selection-end-line="14" selection-end-column="44" />
+        <state relative-caret-position="765">
+          <caret line="48" selection-start-line="48" selection-end-line="48" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/RunCompressDecompressMaze.java">
+    <entry file="file://$PROJECT_DIR$/src/View/Prop.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="663">
-          <caret line="46" selection-start-line="46" selection-end-line="46" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/algorithms/search/Solution.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="510">
-          <caret line="33" column="26" selection-start-line="33" selection-start-column="26" selection-end-line="33" selection-end-column="26" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/IO/MyCompressorOutputStream.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="17">
-          <caret line="24" column="36" selection-start-line="24" selection-start-column="29" selection-end-line="24" selection-end-column="36" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/IO/MyDecompressorInputStream.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="17">
-          <caret line="87" column="28" selection-start-line="87" selection-start-column="28" selection-end-line="87" selection-end-column="28" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Resources/config.properties">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="17">
-          <caret line="1" selection-start-line="1" selection-end-line="3" selection-end-column="29" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/algorithms/search/BestFirstSearch.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="23">
-          <caret line="36" selection-start-line="36" selection-end-line="36" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Client/Client.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="346">
-          <caret line="41" column="12" selection-start-line="41" selection-start-column="12" selection-end-line="41" selection-end-column="12" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/RunCommunicateWithServers.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="527">
-          <caret line="42" column="59" selection-start-line="42" selection-start-column="45" selection-end-line="42" selection-end-column="59" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Server/ServerStrategySolveSearchProblem.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="476">
-          <caret line="35" column="30" selection-start-line="35" selection-start-column="30" selection-end-line="35" selection-end-column="30" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Server/ServerStrategyGenerateMaze.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="289">
-          <caret line="32" selection-start-line="32" selection-end-line="32" />
+          <caret line="46" column="91" selection-start-line="46" selection-start-column="37" selection-end-line="46" selection-end-column="91" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/RunMazeGenerator.java">
+    <entry file="file://$PROJECT_DIR$/src/View/MyViewController.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="281">
-          <caret line="20" selection-start-line="20" selection-end-line="20" />
+        <state relative-caret-position="884">
+          <caret line="70" column="54" selection-start-line="70" selection-start-column="54" selection-end-line="70" selection-end-column="54" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/algorithms/mazeGenerators/SimpleMazeGenerator.java">
+    <entry file="file://$PROJECT_DIR$/src/ViewModel/MyViewModel.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="550">
-          <caret line="81" column="19" selection-start-line="81" selection-start-column="19" selection-end-line="81" selection-end-column="19" />
+        <state relative-caret-position="1615">
+          <caret line="105" selection-start-line="105" selection-end-line="105" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/algorithms/mazeGenerators/Position.java">
+    <entry file="file://$PROJECT_DIR$/src/View/MazeDisplayer.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="17">
-          <caret line="1" selection-start-line="1" selection-end-line="1" />
-          <folding>
-            <element signature="e#945#946#0" expanded="true" />
-            <element signature="e#971#972#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/algorithms/mazeGenerators/Maze.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="550">
-          <caret line="65" selection-start-line="65" selection-end-line="65" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Server/Server.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="811">
-          <caret line="188" column="51" selection-start-line="188" selection-start-column="51" selection-end-line="188" selection-end-column="51" />
-          <folding>
-            <element signature="e#6757#6758#0" expanded="true" />
-            <element signature="e#6804#6805#0" expanded="true" />
-            <element signature="e#7061#7062#0" expanded="true" />
-            <element signature="e#7108#7109#0" expanded="true" />
-            <element signature="e#7325#7326#0" expanded="true" />
-            <element signature="e#7369#7370#0" expanded="true" />
-          </folding>
+          <caret line="164" column="18" selection-start-line="164" selection-start-column="18" selection-end-line="164" selection-end-column="18" />
         </state>
       </provider>
     </entry>
@@ -803,7 +888,7 @@
       <state key="ArtifactsStructureConfigurable.UI">
         <settings>
           <artifact-editor />
-          <last-edited>ATP - Project - PartB:jar</last-edited>
+          <last-edited>ATPJavaFX:jar</last-edited>
           <splitter-proportions>
             <option name="proportions">
               <list>
@@ -828,6 +913,7 @@
       </state>
       <state key="GlobalLibrariesConfigurable.UI">
         <settings>
+          <last-edited>ATPprojectJAR</last-edited>
           <splitter-proportions>
             <option name="proportions">
               <list>
@@ -839,7 +925,7 @@
       </state>
       <state key="JdkListConfigurable.UI">
         <settings>
-          <last-edited>10</last-edited>
+          <last-edited>1.8</last-edited>
           <splitter-proportions>
             <option name="proportions">
               <list>
@@ -851,7 +937,7 @@
       </state>
       <state key="ModuleStructureConfigurable.UI">
         <settings>
-          <last-edited>ATP - Project - PartB</last-edited>
+          <last-edited>ATPJavaFX</last-edited>
           <splitter-proportions>
             <option name="proportions">
               <list>
@@ -863,7 +949,7 @@
       </state>
       <state key="ProjectLibrariesConfigurable.UI">
         <settings>
-          <last-edited>ATP_Project_PartB</last-edited>
+          <last-edited>ATPprojectJAR</last-edited>
           <splitter-proportions>
             <option name="proportions">
               <list>

@@ -1,0 +1,9 @@
+<component name="ArtifactManager">
+  <artifact type="jar" name="ATPJavaFX:jar">
+    <output-path>$PROJECT_DIR$/out/artifacts/ATPJavaFX_jar</output-path>
+    <root id="archive" name="ATPJavaFX.jar">
+      <element id="module-output" name="ATPJavaFX" />
+      <element id="extracted-dir" path="$PROJECT_DIR$/Resources/ATP - Project - PartB.jar" path-in-jar="/" />
+    </root>
+  </artifact>
+</component>

@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.effect.InnerShadow?>
+<?import javafx.scene.layout.BorderPane?>
+
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="320.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8.0.121" xmlns:fx="http://javafx.com/fxml/1">
+   <center>
+      <TextArea blendMode="DARKEN" editable="false" nodeOrientation="LEFT_TO_RIGHT" prefHeight="320.0" prefWidth="600.0" style="-fx-font-weight: bold;" text="Hello! &#10;Welcome to the DEADPOOL MAZE!&#10;&#10;In this game you can playe with the number on the side keyboard and also with the mouse &#10;To play with the mouse just click on the player and drag him in the maze.&#10;To play with the keyboard use: &#10;8 - up &#10;2 - down &#10;6 - right &#10;4 - left &#10;9 - diagonal right-up &#10;7 - diagonal left-up &#10;3 - diagonal right-down &#10;1 - diagonal left-down &#10;To start play press the button &quot;Generate maze&quot;  and choose the rows &#10;and column size. &#10;If you can't solve the maze you can press the &quot;Solve maze&quot; button and it's present you.&#10;the solution. &#10;If you would like to get hint to the solution press &quot;hint&quot;,  But used them wisely there are &#10;only three per game.&#10;Close this window and start your first DEADPOOL MAZE!&#10;Have a fun game! " BorderPane.alignment="CENTER">
+         <effect>
+            <InnerShadow />
+         </effect></TextArea>
+   </center>
+</BorderPane>

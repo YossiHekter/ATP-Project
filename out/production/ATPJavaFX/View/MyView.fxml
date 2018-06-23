@@ -1,0 +1,128 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import View.MazeDisplayer?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Menu?>
+<?import javafx.scene.control.MenuBar?>
+<?import javafx.scene.control.MenuItem?>
+<?import javafx.scene.control.RadioButton?>
+<?import javafx.scene.effect.Blend?>
+<?import javafx.scene.effect.InnerShadow?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" onKeyPressed="#KeyPressed" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8.0.121" xmlns:fx="http://javafx.com/fxml/1" fx:controller="View.MyViewController">
+    <top>
+        <MenuBar BorderPane.alignment="CENTER">
+            <menus>
+                <Menu mnemonicParsing="false" text="_File">
+                    <items>
+                        <MenuItem mnemonicParsing="false" onAction="#generateMaze" text="New" />
+                        <MenuItem mnemonicParsing="false" onAction="#saveMaze" text="Save" />
+                        <MenuItem mnemonicParsing="false" onAction="#loadMaze" text="Load" />
+                        <MenuItem mnemonicParsing="false" onAction="#Exit" text="Exit" />
+                    </items>
+                </Menu>
+                <Menu mnemonicParsing="false" text="_Options">
+                    <items>
+                        <MenuItem mnemonicParsing="false" onAction="#getProperties" text="Properties" />
+                    </items>
+                </Menu>
+                <Menu mnemonicParsing="false" text="_Help">
+                    <items>
+                        <MenuItem mnemonicParsing="false" onAction="#Help" text="Help" />
+                        <MenuItem mnemonicParsing="false" onAction="#About" text="About" />
+                    </items></Menu>
+            </menus>
+        </MenuBar>
+    </top>
+    <left>
+        <VBox alignment="TOP_CENTER" prefHeight="375.0" prefWidth="153.0" BorderPane.alignment="TOP_CENTER">
+            <children>
+                <Label alignment="TOP_LEFT" graphicTextGap="0.0" prefHeight="27.0" prefWidth="162.0" text="DEADPOOL MAZE" textFill="#cc0000" textOverrun="CLIP" wrapText="true">
+               <effect>
+                  <Blend>
+                     <topInput>
+                        <InnerShadow color="#949292" height="1.0" radius="0.0" width="0.0" />
+                     </topInput>
+                  </Blend>
+               </effect>
+               <cursor>
+                  <Cursor fx:constant="DEFAULT" />
+               </cursor>
+               <VBox.margin>
+                  <Insets bottom="10.0" />
+               </VBox.margin>
+               <font>
+                  <Font name="Berlin Sans FB Demi Bold" size="18.0" />
+               </font>
+                </Label>
+                <GridPane alignment="TOP_CENTER">
+                    <columnConstraints>
+                        <ColumnConstraints hgrow="SOMETIMES" maxWidth="90.0" minWidth="10.0" prefWidth="86.0" />
+                        <ColumnConstraints hgrow="SOMETIMES" maxWidth="45.0" minWidth="10.0" prefWidth="26.0" />
+                    </columnConstraints>
+                    <rowConstraints>
+                        <RowConstraints maxHeight="30.0" minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                        <RowConstraints maxHeight="30.0" minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                  <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                  <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                    </rowConstraints>
+                    <opaqueInsets>
+                        <Insets />
+                    </opaqueInsets>
+                    <children>
+                        <Label text="Player row" />
+                        <Label layoutX="10.0" layoutY="17.0" text="Player column" GridPane.rowIndex="1" />
+                        <Label fx:id="fid_player_row" layoutX="10.0" layoutY="47.0" text="Label" GridPane.columnIndex="1" />
+                        <Label fx:id="fid_player_column" layoutX="60.0" layoutY="17.0" text="Label" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+                  <Label text="Hints left" GridPane.rowIndex="2" />
+                  <Label fx:id="fid_hints_left" text="Label" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+                    </children>
+                </GridPane>
+                <Button fx:id="btn_generate_maze" mnemonicParsing="false" onAction="#generateMaze" prefHeight="25.0" prefWidth="100.0" text="Generate maze" />
+                <Button fx:id="btn_solve_maze" disable="true" mnemonicParsing="false" onAction="#solveMaze" prefHeight="25.0" prefWidth="100.0" text="Solve maze">
+                    <VBox.margin>
+                        <Insets top="10.0" />
+                    </VBox.margin>
+                </Button>
+                <Button fx:id="btn_hint" disable="true" mnemonicParsing="false" onAction="#getHint" prefHeight="25.0" prefWidth="100.0" text="Get hint">
+                    <VBox.margin>
+                        <Insets top="10.0" />
+                    </VBox.margin>
+                </Button>
+            <RadioButton mnemonicParsing="false" onAction="#MutePress" text="Mute" textFill="#b20202">
+               <VBox.margin>
+                  <Insets top="100.0" />
+               </VBox.margin>
+               <font>
+                  <Font size="15.0" />
+               </font>
+            </RadioButton>
+            </children>
+            <padding>
+                <Insets top="40.0" />
+            </padding>
+            <BorderPane.margin>
+                <Insets left="10.0" />
+            </BorderPane.margin>
+        </VBox>
+    </left>
+    <center>
+        <AnchorPane BorderPane.alignment="CENTER">
+            <children>
+                <MazeDisplayer fx:id="mazeDisplayer" height="465.0" onMouseDragged="#dragMouse" onMousePressed="#mouseClick" onMouseReleased="#mouseRelase" onScroll="#addMouseScrolling" width="530.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0" BorderPane.alignment="CENTER" />
+            </children>
+            <BorderPane.margin>
+                <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+            </BorderPane.margin></AnchorPane>
+    </center>
+</BorderPane>
