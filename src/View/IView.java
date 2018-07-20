@@ -6,7 +6,7 @@ import javafx.scene.Scene;
 
 /**
  * The interface of the view layer
- * @author Roee Sanker & Yossi Hekter
+ * @author Yossi Hekter
  */
 public interface IView  {
     void setViewModel(MyViewModel myViewModel);

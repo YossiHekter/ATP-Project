@@ -24,7 +24,7 @@ import java.util.concurrent.TimeUnit;
 
 /**
  * This class represents an abstract server
- * @author Roee Sanker & Yossi Hekter
+ * @author Yossi Hekter
  */
 public class Server {
     /**

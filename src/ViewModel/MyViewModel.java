@@ -12,7 +12,7 @@ import java.util.Observable;
 
 /**
  * This class connect between the view class and the model class
- * @author Roee Sanker & Yossi Hekter
+ * @author Yossi Hekter
  */
 public class MyViewModel  extends Observable implements Observer {
 

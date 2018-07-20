@@ -1,19 +1,22 @@
 package View;
 
+import javafx.event.Event;
 import javafx.event.EventHandler;
-import javafx.geometry.Insets;
-import javafx.geometry.Pos;
+import javafx.fxml.FXMLLoader;
+import javafx.scene.Node;
+import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.control.*;
-import javafx.scene.layout.GridPane;
-import javafx.scene.layout.VBox;
 import javafx.stage.Modality;
 import javafx.stage.Stage;
 import javafx.stage.WindowEvent;
 
+import java.io.IOException;
+import java.util.Optional;
+
 /**
  * This class responsible for the generate box window
- * @author Roee Sanker & Yossi Hekter
+ * @author Yossi Hekter
  */
 public class GenerateBox {
 
@@ -26,62 +29,84 @@ public class GenerateBox {
      */
     public static boolean generated = false;
 
+
+    /**
+     * The combo box to choose level
+     */
+    public javafx.scene.control.ComboBox comboBox_levels;
+    public javafx.scene.control.CheckBox checkBox;
+
+    public  Stage window;
     /**
      * This present the generate box window
      */
     public int[] display(){
-        Stage window = new Stage();
+        window = new Stage();
         window.setResizable(false);
         window.initModality(Modality.APPLICATION_MODAL);
         window.setTitle("Generate");
-        window.setWidth(270);
-        window.setHeight(170);
-        GridPane grid = new GridPane();
-        grid.setPadding(new Insets(10, 10, 10, 10));
-        grid.setVgap(8);
-        grid.setHgap(10);
+        window.setWidth(300);
+        window.setHeight(250);
 
-        //set row
-        Label setRow = new Label("set row");
-        TextField txtfid_row = new TextField("10");
-        GridPane.setConstraints(setRow, 0, 0);
-        GridPane.setConstraints(txtfid_row, 1, 0);
-
-        //set column
-        Label colmunRow = new Label("set column");
-        TextField txtfid_column = new TextField("10");
-        GridPane.setConstraints(colmunRow, 0, 1);
-        GridPane.setConstraints(txtfid_column, 1, 1);
-
-        //generate button
-        Button btn_generate = new Button("Generate!");
-
-        //init scene
-        grid.getChildren().addAll(setRow, txtfid_row, colmunRow, txtfid_column);
-        VBox vBox = new VBox(10);
-        vBox.getChildren().addAll(grid, btn_generate);
-        vBox.setAlignment(Pos.CENTER);
-        Scene scene = new Scene(vBox, 250, 150);
-
-        //setonaction
-        btn_generate.setOnAction(e -> {
-            generated = true;
-            try{
-                ans[0] = Integer.parseInt(txtfid_row.getText());
-                ans[1] = Integer.parseInt(txtfid_column.getText());
-            }catch (Exception ex)
-            {
-                ans[0]=10;
-                ans[1]=10;
-            }
-            window.close();
-        });
+        //FXML load
+        FXMLLoader fxmlLoader = new FXMLLoader();
+        Parent root = null;
+        try {
+            root = fxmlLoader.load(getClass().getResource("GenerateView.fxml").openStream());
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+        Scene scene = new Scene(root, 400, 300);
         scene.getStylesheets().add(getClass().getResource("ViewStyle.css").toExternalForm());
         window.setScene(scene);
-        SetStageCloseEvent(window);
+        SetStageCloseEvent(window);;
         window.showAndWait();
-
         return ans;
+    }
+
+    //set on action
+    public void generateMaze(Event event){
+        if(comboBox_levels.getSelectionModel().getSelectedItem()==null){
+            Alert alert = new Alert(Alert.AlertType.ERROR);
+            alert.setHeaderText("Please choose a level");
+            Optional<ButtonType> result = alert.showAndWait();
+            if (result.get() == ButtonType.OK)
+                alert.close();
+        }
+        else
+        {
+            setMazeSize();
+            if(checkBox.isSelected()){
+
+            }
+            //window.close();
+            final Node source = (Node) event.getSource();
+            final Stage stage = (Stage) source.getScene().getWindow();
+            stage.close();
+        }
+    }
+
+    private void setMazeSize(){
+        String level = comboBox_levels.getSelectionModel().getSelectedItem().toString();
+        generated = true;
+        switch (level) {
+            case "Easy":
+                ans[0] = 10;
+                ans[1] = 10;
+                break;
+            case "Medium":
+                ans[0] = 25;
+                ans[1] = 25;
+                break;
+            case "Hard":
+                ans[0] = 50;
+                ans[1] = 50;
+                break;
+            case "Crazy":
+                ans[0] = 150;
+                ans[1] = 150;
+                break;
+        }
     }
 
     /**

@@ -18,7 +18,7 @@ import java.util.ResourceBundle;
 
 /**
  * This class responsible for the help window
- * @author Roee Sanker & Yossi Hekter
+ * @author Yossi Hekter
  */
 public class Help{
 

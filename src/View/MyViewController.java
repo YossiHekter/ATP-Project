@@ -22,7 +22,7 @@ import java.util.Optional;
 
 /**
  * This class is the class that responsible for all the main scene of the app
- * @author Roee Sanker & Yossi Hekter
+ * @author Yossi Hekter
  */
 public class MyViewController implements IView, Observer {
 
@@ -206,7 +206,6 @@ public class MyViewController implements IView, Observer {
             }
         }
     }
-
 
     /**
      * This function generate new maze
@@ -393,22 +392,6 @@ public class MyViewController implements IView, Observer {
         {
             player.setMute(false);
             muteIsOn = false;
-        }
-    }
-
-    /**
-     * This handle with scrolling eith the mouse
-     * @param scrollEvent The scrolling of the mouse
-     */
-    public void addMouseScrolling(ScrollEvent scrollEvent) {
-        if(scrollEvent.isControlDown()) {
-            double zoomFactor = 1.05;
-            double deltaY = scrollEvent.getDeltaY();
-            if (deltaY < 0) {
-                zoomFactor = 2.0 - zoomFactor;
-            }
-            mazeDisplayer.setScaleX(mazeDisplayer.getScaleX() * zoomFactor);
-            mazeDisplayer.setScaleY(mazeDisplayer.getScaleY() * zoomFactor);
         }
     }
 

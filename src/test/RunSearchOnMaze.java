@@ -7,9 +7,6 @@ import algorithms.search.*;
 
 import java.util.ArrayList;
 
-/**
- * Created by Aviadjo on 3/22/2017.
- */
 public class RunSearchOnMaze {
     public static void main(String[] args) {
         IMazeGenerator mg = new MyMazeGenerator();

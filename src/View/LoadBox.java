@@ -5,7 +5,7 @@ import java.io.File;
 
 /**
  * This class responsible for the load window
- * @author Roee Sanker & Yossi Hekter
+ * @author Yossi Hekter
  */
 public class LoadBox {
     /**

@@ -8,7 +8,7 @@ import java.util.ArrayList;
 
 /**
  * This class represents a server that produces mazes
- * @author Roee Sanker & Yossi Hekter
+ * @author Yossi Hekter
  */
 public class ServerStrategyGenerateMaze implements IServerStrategy {
 

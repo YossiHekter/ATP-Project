@@ -6,7 +6,7 @@
 
 <BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="180.0" prefWidth="350.0" xmlns="http://javafx.com/javafx/8.0.121" xmlns:fx="http://javafx.com/fxml/1">
    <center>
-      <TextArea blendMode="DARKEN" editable="false" nodeOrientation="LEFT_TO_RIGHT" prefHeight="200.0" prefWidth="200.0" style="-fx-font-weight: bold;" text="Developed by Hekter Yossi &amp; Sanker Roee &#10;Student in the Ben Gurion University &#10;DEADPOOL MAZE 1.0 &#10;This app developed from ground zero in Java&#10;The app including:&#10;       Use of several  design pattern: &#10;              Observer, Bridge, Strategy. &#10;       Communication between server and client.&#10;       Generate maze by the Prim's algorithm.&#10;       Solve maze with polymorphism using:&#10;              DFS, BFS, Best First search" BorderPane.alignment="CENTER">
+      <TextArea blendMode="DARKEN" editable="false" nodeOrientation="LEFT_TO_RIGHT" prefHeight="200.0" prefWidth="200.0" style="-fx-font-weight: bold;" text="Developed by Hekter Yossi&#10;Student in the Ben Gurion University &#10;DEADPOOL MAZE 1.0 &#10;This app developed from ground zero in Java&#10;The app including:&#10;       Use of several  design pattern: &#10;              Observer, Bridge, Strategy. &#10;       Communication between server and client.&#10;       Generate maze by the Prim's algorithm.&#10;       Solve maze with polymorphism using:&#10;              DFS, BFS, Best First search" BorderPane.alignment="CENTER">
       <effect>
          <InnerShadow />
       </effect></TextArea>

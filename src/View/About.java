@@ -10,7 +10,7 @@ import java.io.IOException;
 
 /**
  * This class responsible for the saving window
- * @author Roee Sanker & Yossi Hekter
+ * @author Yossi Hekter
  */
 public class About {
 

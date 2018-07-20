@@ -88,8 +88,8 @@
                   <Label fx:id="fid_hints_left" text="Label" GridPane.columnIndex="1" GridPane.rowIndex="2" />
                     </children>
                 </GridPane>
-                <Button fx:id="btn_generate_maze" mnemonicParsing="false" onAction="#generateMaze" prefHeight="25.0" prefWidth="100.0" text="Generate maze" />
-                <Button fx:id="btn_solve_maze" disable="true" mnemonicParsing="false" onAction="#solveMaze" prefHeight="25.0" prefWidth="100.0" text="Solve maze">
+                <Button fx:id="btn_generate_maze" mnemonicParsing="false" onAction="#generateMaze" prefHeight="25.0" prefWidth="100.0" text="Start" />
+                <Button fx:id="btn_solve_maze" disable="true" mnemonicParsing="false" onAction="#solveMaze" prefHeight="25.0" prefWidth="100.0" text="Solve">
                     <VBox.margin>
                         <Insets top="10.0" />
                     </VBox.margin>

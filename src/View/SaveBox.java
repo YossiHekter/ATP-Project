@@ -8,7 +8,7 @@ import java.util.Optional;
 
 /**
  * This class responsible for the saving window
- * @author Roee Sanker & Yossi Hekter
+ * @author Yossi Hekter
  */
 public class SaveBox {
 
@@ -46,7 +46,6 @@ public class SaveBox {
                 Optional<ButtonType> result = alert.showAndWait();
                 if (result.get() == ButtonType.OK)
                     alert.close();
-
                 saved = true;
             }
         }
