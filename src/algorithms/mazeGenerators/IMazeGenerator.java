@@ -2,7 +2,7 @@ package algorithms.mazeGenerators;
 
 /**
  * The interface of a Maze creator
- * @author Roee Sanker & Yossi Hekter
+ * @author Yossi Hekter
  */
 public interface IMazeGenerator {
     /**

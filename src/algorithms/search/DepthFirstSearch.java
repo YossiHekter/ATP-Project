@@ -5,7 +5,7 @@ import java.util.Stack;
 
 /**
  * This class represents the Depth First Search algorithm
- * @author Roee Sanker & Yossi Hekter
+ * @author Yossi Hekter
  */
 public class DepthFirstSearch extends ASearchingAlgorithm {
 

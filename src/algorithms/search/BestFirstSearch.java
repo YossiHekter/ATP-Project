@@ -5,7 +5,7 @@ import java.util.PriorityQueue;
 
 /**
  * This class represents the Best First Search algorithm
- * @author Roee Sanker & Yossi Hekter
+ * @author Yossi Hekter
  */
 public class BestFirstSearch extends ASearchingAlgorithm {
 

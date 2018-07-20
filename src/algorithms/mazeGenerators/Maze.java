@@ -4,7 +4,7 @@ import java.io.Serializable;
 
 /**
  * This class represents a maze object
- * @author Roee Sanker & Yossi Hekter
+ * @author Yossi Hekter
  */
 public class Maze implements Serializable {
 

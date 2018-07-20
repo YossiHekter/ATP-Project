@@ -7,7 +7,7 @@ import java.util.ArrayList;
 
 /**
  * The interface of the model layer
- * @author Roee Sanker & Yossi Hekter
+ * @author Yossi Hekter
  */
 public interface IModel {
 

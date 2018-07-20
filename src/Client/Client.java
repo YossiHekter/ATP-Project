@@ -5,7 +5,7 @@ import java.net.Socket;
 
 /**
  * This class represents a client
- * @author Roee Sanker & Yossi Hekter
+ * @author Yossi Hekter
  */
 public class Client {
     /**

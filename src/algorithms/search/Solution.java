@@ -5,7 +5,7 @@ import java.util.ArrayList;
 
 /**
  * This class represents a solution to a problem
- * @author Roee Sanker & Yossi Hekter
+ * @author Yossi Hekter
  */
 public class Solution implements Serializable {
     /**

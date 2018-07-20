@@ -15,7 +15,7 @@ import java.util.concurrent.*;
 
 /**
  * This class is the class that responsible all the logic behind the app
- * @author Roee Sanker & Yossi Hekter
+ * @author Yossi Hekter
  */
 public class MyModel extends Observable implements IModel {
 

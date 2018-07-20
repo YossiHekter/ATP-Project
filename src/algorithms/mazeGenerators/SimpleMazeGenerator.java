@@ -2,7 +2,7 @@ package algorithms.mazeGenerators;
 
 /**
  * This class represents a simple maze
- * @author Roee Sanker & Yossi Hekter
+ * @author Yossi Hekter
  */
 public class SimpleMazeGenerator extends AMazeGenerator {
 

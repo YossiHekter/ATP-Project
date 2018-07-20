@@ -6,7 +6,7 @@ import java.io.Serializable;
 /**
  * This class represents a state in the maze
  * Maze state is represented by position class
- * @author Roee Sanker & Yossi Hekter
+ * @author Yossi Hekter
  */
 public class MazeState extends AState {
 

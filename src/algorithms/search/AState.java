@@ -4,7 +4,7 @@ import java.io.Serializable;
 
 /**
  * This class represents an abstract state of a ISsearchable class
- * @author Roee Sanker & Yossi Hekter
+ * @author Yossi Hekter
  */
 public abstract class AState implements Comparable<AState>, Serializable {
     /**

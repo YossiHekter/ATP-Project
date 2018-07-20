@@ -3,7 +3,7 @@ import java.util.Vector;
 
 /**
  * This class represents a maze that generated using prim's algorithm
- * @author Roee Sanker & Yossi Hekter
+ * @author Yossi Hekter
  */
 public class MyMazeGenerator extends AMazeGenerator {
 

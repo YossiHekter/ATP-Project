@@ -5,7 +5,7 @@ import java.io.OutputStream;
 
 /**
  * This class compress the maze to a byte array and write it into a file
- * @author Roee Sanker & Yossi Hekter
+ * @author Yossi Hekter
  */
 public class MyCompressorOutputStream extends OutputStream {
     /**

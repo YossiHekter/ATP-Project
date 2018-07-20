@@ -2,7 +2,7 @@ package algorithms.search;
 
 /**
  * The interface of search algorithms
- * @author Roee Sanker & Yossi Hekter
+ * @author Yossi Hekter
  */
 public interface ISearchingAlgorithm {
 

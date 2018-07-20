@@ -2,7 +2,7 @@ package algorithms.mazeGenerators;
 
 /**
  * This class represents an abstract maze
- * @author Roee Sanker & Yossi Hekter
+ * @author Yossi Hekter
  */
 public abstract class AMazeGenerator implements IMazeGenerator{
     private Maze maze;

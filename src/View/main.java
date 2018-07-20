@@ -16,7 +16,7 @@ import java.util.Optional;
 
 /**
  * This class is the main call that start the app
- * @author Roee Sanker & Yossi Hekter
+ * @author Yossi Hekter
  */
 public class main extends Application {
 
@@ -46,7 +46,7 @@ public class main extends Application {
         //--------------
         SetStageCloseEvent(primaryStage, myModel);
         primaryStage.show();
-        view.Help();
+        //view.Help();
     }
 
     /**

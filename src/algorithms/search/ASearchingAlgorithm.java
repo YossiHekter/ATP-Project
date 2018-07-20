@@ -2,7 +2,7 @@ package algorithms.search;
 
 /**
  * This class represents an abstract search algorithm
- * @author Roee Sanker & Yossi Hekter
+ * @author Yossi Hekter
  */
 public abstract class ASearchingAlgorithm implements  ISearchingAlgorithm{
 

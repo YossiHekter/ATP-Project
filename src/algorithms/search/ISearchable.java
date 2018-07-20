@@ -4,7 +4,7 @@ import java.util.ArrayList;
 
 /**
  * The interface of a searchable object
- * @author Roee Sanker & Yossi Hekter
+ * @author Yossi Hekter
  */
 public interface ISearchable {
 

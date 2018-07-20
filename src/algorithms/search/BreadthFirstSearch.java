@@ -5,7 +5,7 @@ import java.util.Vector;
 
 /**
  * This class represents the Breadth First Search algorithm
- * @author Roee Sanker & Yossi Hekter
+ * @author Yossi Hekter
  */
 public class BreadthFirstSearch extends ASearchingAlgorithm{
 

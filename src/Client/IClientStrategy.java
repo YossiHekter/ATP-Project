@@ -5,7 +5,7 @@ import java.io.OutputStream;
 
 /**
  * The interface of a client strategy
- * @author Roee Sanker & Yossi Hekter
+ * @author Yossi Hekter
  */
 public interface IClientStrategy {
     /**

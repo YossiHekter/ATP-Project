@@ -4,7 +4,7 @@ import java.io.Serializable;
 
 /**
  * This class represents a position on the maze
- * @author Roee Sanker & Yossi Hekter
+ * @author Yossi Hekter
  */
 public class Position implements Serializable {
 

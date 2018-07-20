@@ -6,7 +6,7 @@ import java.util.ArrayList;
 
 /**
  * This class read a compressed maze from a file and decompress it
- * @author Roee Sanker & Yossi Hekter
+ * @author Yossi Hekter
  */
 public class MyDecompressorInputStream extends InputStream {
 

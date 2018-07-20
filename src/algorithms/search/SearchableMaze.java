@@ -5,7 +5,7 @@ import algorithms.mazeGenerators.Maze;
 
 /**
  * This class represents a maze that can be searched by search algorithms
- * @author Roee Sanker & Yossi Hekter
+ * @author Yossi Hekter
  */
 public class SearchableMaze implements ISearchable {
     /**
