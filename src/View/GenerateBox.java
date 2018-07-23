@@ -76,10 +76,6 @@ public class GenerateBox {
         else
         {
             setMazeSize();
-            if(checkBox.isSelected()){
-
-            }
-            //window.close();
             final Node source = (Node) event.getSource();
             final Stage stage = (Stage) source.getScene().getWindow();
             stage.close();

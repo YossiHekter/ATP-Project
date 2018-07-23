@@ -46,7 +46,6 @@ public class main extends Application {
         //--------------
         SetStageCloseEvent(primaryStage, myModel);
         primaryStage.show();
-        //view.Help();
     }
 
     /**
